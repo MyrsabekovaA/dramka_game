@@ -1,5 +1,4 @@
 <template>
-  <NavBar />
   <div class="home">
       <div class="container">
         <div class="glitch">
@@ -14,7 +13,6 @@
 </template>
 
 <script>
-import NavBar from "@/components/NavBar";
 export default {
   data() {
     return {
@@ -22,9 +20,6 @@ export default {
     }
   },
   name: "HomePage",
-  components: {
-    NavBar,
-  },
 };
 </script>
 
