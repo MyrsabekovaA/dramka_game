@@ -77,4 +77,13 @@ header{
     }
   }
 }
+@media (max-width: 500px) {
+  header nav .link{
+    font-size: 10px;
+  }
+  header nav li {
+    padding: 4px;
+    margin-left: 8px;
+  }
+}
 </style>
