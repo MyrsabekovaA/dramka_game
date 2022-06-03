@@ -1,150 +1,125 @@
 <template>
   <NavBar />
   <div class="home">
-    <section class="hero">
-<!--      <div class="homepage">-->
-<!--        <img alt="Logo" src="/assets/background.jpg">-->
-<!--      </div>-->
-      <div class="hero-text container">
-        <div class="container-card">
-          <div class="card">
-            <img class="resourses" src="assets/resourses.jpg">
-            <div class="contentBx">
-              <p class="condition">Какое-то условие</p>
-              <div class="chelik">
-                <button class="button-4" role="button"><router-link to="/dramkagame">Начать</router-link></button>
-              </div>
-<!--              <img src="assets/chelik.jpg">-->
-<!--              <button class="button-4" role="button" >Начать</button>-->
-            </div>
-          </div>
+      <div class="container">
+        <div class="glitch">
+          <router-link style="color: #fff;" @mouseover="text = 'НАЧАТЬ'" @mouseleave="text = 'DRAMKA'" to="/dramkagame">
+            <span aria-hidden="true">{{ text }}</span>
+            <span>{{ text }}</span>
+            <span aria-hidden="true">{{ text }}</span>
+          </router-link>
         </div>
       </div>
-    </section>
-    <section class="about">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-      </p>
-    </section>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar";
 export default {
+  data() {
+    return {
+      text: 'DRAMKA'
+    }
+  },
   name: "HomePage",
   components: {
     NavBar,
-  }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.hero {
-  background-image: url("/public/assets/background.jpg");
-  background-attachment: fixed;
-  position: relative;
+
+.container {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
   height: 100vh;
-  img {
-    //padding-top: 75px;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-  }
-  .hero-text {
-    height: 100%;
-    display: flex;
-    //flex-direction: column;
-    justify-content: center;
-    color: #fff;
-    h4 {
-      text-transform: uppercase;
-      font-size: 22px;
-      padding-bottom: 4px;
-    }
-    h2 {
-      font-size: 50px;
-    }
+  color: white;
+  display: flex;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url("/public/assets/bgnew.png");
+}
 
-  .container-card .card{
-    position: relative;
-    width: 550px;
-    height: 100vh;
-    background: #272121;
-    overflow: hidden;
-  }
-  .resourses{
-    position: absolute;
-    overflow: hidden;
-    bottom: 88%;
-    width: 400px;
-    height: calc(100vh - 90%);
-    right: 70px;
-  }
-  .contentBx{
-    position: absolute;
-    width: 550px;
-    height: calc(100vh - 20%);
-    background: #d6bb75;
-    overflow: hidden;
-    right: 0;
-    top: 20%;
+.glitch {
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+  0.025em 0.04em 0 #fffc00;
+  animation: glitch 725ms infinite;
+  //filter: brightness(100%);
+  //margin: 0 auto;
+  //height: 100%;
+  //width: 100%;
+}
 
-    .condition{
-      color: black;
-      padding: 40px 45px;
-      align-items: center;
-      font-size: large;
-      text-align: center;
-    }
-    .chelik{
-      background-image: url("/public/assets/chelik.jpg");
-        //background-attachment: fixed;
-      //position: relative;
-      //top: 15%;
-      position: absolute;
-      height: calc(100vh - 72%);
-      bottom: 25%;
-      width: 390px;
-      right: 76px;
-    }
+.glitch span {
+  position: absolute;
+  top: -2.5rem;
+  left: -10.5rem;
+}
+
+.glitch span:first-child {
+  animation: glitch 500ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  transform: translate(-0.04em, -0.03em);
+  opacity: 0.75;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  transform: translate(0.04em, 0.03em);
+  opacity: 0.75;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    0.025em 0.04em 0 #fffc00;
   }
-  .button-4 {
-    margin-top: 66%;
-    margin-left: 30%;
-    padding: 0 2.5rem;
-    height: 50px;
-    text-align: center;
-    font-size: 16px;
-    text-transform: uppercase;
-    cursor: pointer;
-    background: brown;
-    border: none;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-    letter-spacing: 1px;
-    border-radius: 12px;
-    box-shadow: 1px 5px 10px rgba(7, 31, 36, 0.54);
-    display: inline-block;
+  15% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    0.025em 0.04em 0 #fffc00;
   }
+  16% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+    -0.05em -0.05em 0 #fffc00;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+    -0.05em -0.05em 0 #fffc00;
+  }
+  50% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+    0 -0.04em 0 #fffc00;
+  }
+  99% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+    0 -0.04em 0 #fffc00;
+  }
+  100% {
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+    -0.04em -0.025em 0 #fffc00;
   }
 }
-.about p{
-  color: black;
+
+@media (max-width: 500px) {
+  .glitch {
+    font-size: 4rem;
+  }
+  .glitch span {
+    position: absolute;
+    top: -2rem;
+    left: -8rem;
+  }
+}
+button, button:after{
+  width: 360px;
+  height: 35px;
+  font-size: 36px;
+
 }
 </style>
