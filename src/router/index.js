@@ -11,7 +11,12 @@ const routes = [
         path: '/dramkagame',
         name: 'Game',
         component: () => import('../views/DramkaGame')
-    }
+    },
+    // {
+    //     path: "/instructions",
+    //     name: "Instructions",
+    //     component: () => import('../')
+    // }
 ];
 
 const router = createRouter({
