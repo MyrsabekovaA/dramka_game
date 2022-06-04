@@ -1,11 +1,10 @@
 <template>
   <header :class="{'scrolled-nav' : scrollPosition}">
     <nav>
-<!--      <router-link class="link" v-if="/dramkagame" :to="{name: 'Home'}"><img src="assets/logo.svg"></router-link>-->
-      <a class="link" href="#container"><img src="assets/logo.svg"></a>
+      <router-link class="link" :to="{name: 'Home'}"><img src="assets/logo.svg"></router-link>
       <ul class="navigation">
-        <li><a class="glitchy" data-glitch="О команде" href="#team">О команде</a></li>
-        <li><a class="glitchy" data-glitch="Инструкция" href="#instructions">Инструкция</a></li>
+          <li><router-link class="glitchy" data-glitch="О команде" :to="{name: 'Home',hash: '#team'}">О команде</router-link></li>
+          <li><router-link class="glitchy" data-glitch="Инструкция" :to="{name: 'Home'}">Инструкция</router-link></li>
       </ul>
     </nav>
   </header>
@@ -16,9 +15,24 @@ export default {
   name: "NavBar",
   data() {
     return {
-      scrollPosition: null
+      scrollPosition: null,
+        // hash: this.$route.hash,
     };
   },
+    // mounted() {
+    //     this.$nextTick(function () {
+    //         if (this.hash) {
+    //             const refName = this.hash.replace('#', '')
+    //             this.scrollToAnchorPoint(refName)
+    //         }
+    //     })
+    // },
+    // methods: {
+    //     scrollToAnchorPoint(refName) {
+    //         const el = this.$refs[refName]
+    //         el.scrollIntoView({ behavior: 'smooth' })
+    //     }
+    // }
 };
 </script>
 
