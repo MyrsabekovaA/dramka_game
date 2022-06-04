@@ -161,7 +161,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/index.scss";
+@import "../styles/index";
 $cardsTotal: 10;
 $cardsWidth: 300px;
 $cardsPositionOffset: 55vh * 0.06;

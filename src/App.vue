@@ -1,16 +1,17 @@
 <template>
   <div class="app">
+    <NavBar />
     <router-view />
   </div>
 </template>
 
 <script>
-// import NavBar from "@/components/NavBar";
+import NavBar from "@/components/NavBar";
 export default {
   name: "App",
-  // components: {
-  //   NavBar,
-  // }
+  components: {
+    NavBar,
+  }
 };
 </script>
 
@@ -24,16 +25,8 @@ export default {
   text-decoration: none;
 }
 .app {
-  //min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url("/public/assets/bgnew.png");
+  min-height: 100vh;
   height: 100%;
-  //position: ;
-  //background-image: url("/public/assets/background.jpg");;
-  ////background-color: #f5f0ed;
-
 }
-//.container {
-//  //padding: 0 20px;
-//  //max-width: 1140px;
-//  margin: 0 auto;
-//}
 </style>

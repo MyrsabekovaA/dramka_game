@@ -1,11 +1,10 @@
 <template>
   <header :class="{'scrolled-nav' : scrollPosition}">
     <nav>
-      <div class="branding"> DRAMKA</div>
+        <router-link class="link" :to="{name: 'Home'}"><img src="assets/logo.svg"></router-link>
       <ul class="navigation">
-        <li><router-link class="link" :to="{name: 'Home'}">Главная</router-link></li>
-        <li><router-link class="link" :to="{name: 'Home'}">О проекте</router-link></li>
         <li><router-link class="link" :to="{name: 'Home'}">О команде</router-link></li>
+        <li><router-link class="link" :to="{name: 'Home'}">Инструкция</router-link></li>
       </ul>
     </nav>
   </header>
@@ -64,9 +63,10 @@ header{
       }
     }
 
-    .branding{
+    img{
       display: flex;
       align-items: center;
+        width: 60px;
     }
 
     .navigation{
