@@ -1,4 +1,5 @@
 <template>
+  <NavBar_game />
   <div id="game">
     <GameCardStack
         :cards="visibleCards"
@@ -11,11 +12,13 @@
 </template>
 
 <script>
+  import NavBar_game from "../components/NavBar_game";
 import GameCardStack from "@/components/GameCardStack";
 export default {
   name: "DramkaGame",
   components: {
-    GameCardStack
+    GameCardStack,
+    NavBar_game
   },
   data() {
     return {

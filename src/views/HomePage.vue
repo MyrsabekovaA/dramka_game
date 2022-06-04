@@ -1,4 +1,5 @@
 <template>
+  <NavBar />
   <div class="home">
       <div id="container">
         <div class="glitch">
@@ -40,7 +41,9 @@
 </template>
 
 <script>
+  import NavBar from "../components/NavBar";
 export default {
+  components: {NavBar},
   data() {
     return {
       text: 'DRAMKA'
