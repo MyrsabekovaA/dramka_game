@@ -1,56 +1,73 @@
 <template>
   <NavBar_game />
   <div id="game">
-    <GameCardStack
-        :cards="visibleCards"
-        @cardAccepted="handleCardAccepted"
-        @cardRejected="handleCardRejected"
-        @cardSkipped="handleCardSkipped"
-        @hideCard="removeCardFromDeck"
+    <Swipeable
+        v-for="card in cards"
+        :key="card.id"
+        v-on:swipe="onSwipe"
+        :style="{
+        position: 'absolute',
+        height: '400px',
+        width: '250px',
+        background: card.color,
+        borderRadius: '8px',
+      }"
     />
   </div>
 </template>
 
 <script>
-  import NavBar_game from "../components/NavBar_game";
-import GameCardStack from "@/components/GameCardStack";
+import NavBar_game from "@/components/NavBar_game";
+import { Swipeable } from "vue-swipy";
+function getRandomColor() {
+  var letters = "0123456789ABCDEF";
+  var color = "#";
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
 export default {
   name: "DramkaGame",
-  components: {
-    GameCardStack,
-    NavBar_game
-  },
+  components: { Swipeable, NavBar_game },
   data() {
-    return {
-      visibleCards: ["Карта 1", "Карта 2", "Карта 3", "Карта 4", "Карта 5", "Карта 6", "Карта 7", "Карта 8", "Карта 9", "Карта 10"]
-    };
+    return { cards: [], src: require('/public/assets/characters/girl.svg')};
+  },
+  mounted() {
+    this.cards.push({ id: Math.random(), color: getRandomColor() });
+    this.cards.push({ id: Math.random(), color: getRandomColor() });
+    this.cards.push({ id: Math.random(), color: getRandomColor() });
   },
   methods: {
-    handleCardAccepted() {
-      console.log("handleCardAccepted");
+    onSwipe(direction) {
+      console.log(direction);
+      setTimeout(() => {
+        this.cards.pop();
+        this.cards.unshift({ id: Math.random(), color: getRandomColor() });
+      }, 300);
     },
-    handleCardRejected() {
-      console.log("handleCardRejected");
-    },
-    handleCardSkipped() {
-      console.log("handleCardSkipped");
-    },
-    removeCardFromDeck() {
-      this.visibleCards.shift();
-    }
-  }
-}
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-@import "../styles/mixins";
-
+<style>
+body {
+  margin: 0;
+}
+.card {
+  position: absolute;
+  height: 400px;
+  width: 300px;
+  border-radius: 8px;
+  /*background-color: antiquewhite;*/
+  /*background-image: url("/public/assets/characters/girl.svg");*/
+}
 #game {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
-.cards {
-  margin: auto;
-}
-
 </style>

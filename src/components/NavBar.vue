@@ -1,30 +1,68 @@
 <template>
   <header :class="{'scrolled-nav' : scrollPosition}">
     <nav>
-<!--      <router-link class="link" v-if="/dramkagame" :to="{name: 'Home'}"><img src="assets/logo.svg"></router-link>-->
       <a class="link" href="#container"><img src="assets/logo.svg"></a>
       <ul class="navigation">
         <li><a class="glitchy" data-glitch="О команде" href="#team">О команде</a></li>
         <li><a class="glitchy" data-glitch="Инструкция" href="#instructions">Инструкция</a></li>
+        <li class="player">
+          <button v-if="!isPlaying" @click="play">Музыка</button>
+          <button v-else @click="pause">Музыка</button>
+        </li>
       </ul>
     </nav>
   </header>
 </template>
 
 <script>
+// var music = new Audio('/public/assets/music.mp3')
 export default {
   name: "NavBar",
   data() {
     return {
-      scrollPosition: null
+      current: {},
+      index: 0,
+      isPlaying: false,
+      scrollPosition: null,
+      songs: {src: require('/public/assets/music.mp3')},
+      player: new Audio()
     };
   },
+  // methods: {
+  //   play (song){
+  //   //   if (typeof song.src != "undefined") {
+  //   //   }
+  //   this.current = song;
+  //   this.player.src = this.current.src;
+  //
+  //   this.player.play();
+  //   this.player.addEventListener('ended', function () {
+  //     this.index++;
+  //     if (this.index > this.songs.length - 1) {
+  //       this.index = 0;
+  //     }
+  //     this.current = this.songs[this.index];
+  //     this.play(this.current);
+  //   }.bind(this));
+  //   this.isPlaying = true;
+  // },
+  // pause () {
+  //   this.player.pause();
+  //   this.isPlaying = false;
+  // },
+  // },
+  // created () {
+  //   this.current = this.songs[this.index];
+  //   this.player.src = this.current.src;
+  // }
 };
 </script>
 
 <style lang="scss" scoped>
 header{
   background-color: transparent;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5));
+  backdrop-filter: blur(2px);
   z-index: 99;
   width: 100%;
   position: fixed;

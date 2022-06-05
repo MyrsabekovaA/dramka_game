@@ -14,36 +14,68 @@
           <p class="author">Юрий Гагарин</p>
         </div>
       </div>
+      <div id="about">
+        <div class='row'>
+          <div class='column'>
+            <div class='about_theme'>
+            </div>
+          </div>
+          <div class='column'>
+            <div class='about_text'>
+              <b>DRAMKA</b> - это карточная игра симулятора президента.
+              <br/>
+              <br/>
+              Действия происходят в нынешнее время. Как президент вымышленной страны,
+              вы должны реагировать на события, которые предстанут перед вашим государством.
+              Каждое решение влияет на исход дальнейших событий по-разному.
+              Ваша цель состоит в том, чтобы управлять страной как можно больше лет.
+              Как только ваше царствование закончится, вы продолжаете править; однако, уже как новый президент.
+              В ваших руках судьба мира!
+              <br/>
+              Желаем удачи!
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="instructions">
         <div class='row'>
           <div class='column'>
-            <div class='instructions_theme'>
-              Some Text in Column One
+            <div class='instructions_text' style="color: white">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, asperiores autem cum deleniti doloremque dolorum eaque enim explicabo fugiat impedit ipsam ipsum necessitatibus nesciunt officia possimus, qui quo, rem repellendus similique soluta ullam vero. Accusantium ad adipisci alias aspernatur delectus deserunt dicta dolore ducimus eos est excepturi facere facilis fugit id illo inventore iusto laboriosam maiores neque obcaecati odit officia officiis placeat possimus quas, quisquam quod recusandae reprehenderit repudiandae rerum sequi sint tempore veniam veritatis vitae voluptas voluptates. Aspernatur doloribus inventore ipsa modi necessitatibus optio praesentium, suscipit veniam? Commodi culpa dolorum laborum rem suscipit. Accusantium ad animi architecto atque aut dolorum ea eos error explicabo facere illo magni maiores modi, nam nesciunt, officia perferendis perspiciatis, possimus quae quasi quibusdam repellendus sit soluta temporibus totam unde vero? Asperiores, assumenda commodi dolore eaque expedita fugiat harum labore modi nam obcaecati sed, sint voluptates? A ad asperiores earum et facere incidunt iure necessitatibus officiis tempora ut? Dignissimos dolorum ea perspiciatis quidem quis? Aspernatur distinctio, dolor eos exercitationem explicabo hic iste iure odit officia quod sed soluta totam voluptatum? Atque consectetur, culpa earum eos error expedita fugiat ipsa magnam nobis non odio placeat possimus quis recusandae saepe sed temporibus unde, vitae voluptate voluptatem.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium corporis doloribus incidunt modi necessitatibus nemo placeat quia recusandae reprehenderit suscipit, tempora voluptatem. Beatae debitis dolores esse illum nam nesciunt non obcaecati omnis quia recusandae, sequi vel. Adipisci animi at commodi consequuntur deserunt est ex fugiat illum ipsam iusto laboriosam magni molestias nihil nostrum odio officiis pariatur placeat quam quis quos repellat reprehenderit sint soluta, vel vero vitae, voluptatibus voluptatum. Alias dicta eius eligendi ipsum magni mollitia saepe, similique suscipit. Aliquid aperiam, autem, beatae dolores error eum exercitationem facere facilis fuga ipsam quae, quaerat sed similique voluptas voluptate voluptatem voluptates!
               </p>
             </div>
           </div>
           <div class='column'>
-            <div class='instructions_text'>
-              Some Text in Column Two
+            <div class='instructions_theme'>
+            </div>
+          </div>
+          </div>
+      </div>
+      <div id="instructionsv2">
+        <div class='row'>
+          <div class='column'>
+            <div class='instructionsv2_theme'>
+            </div>
+          </div>
+          <div class='column'>
+            <div class='instructionsv2_text' style="color: white">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, asperiores autem cum deleniti doloremque dolorum eaque enim explicabo fugiat impedit ipsam ipsum necessitatibus nesciunt officia possimus, qui quo, rem repellendus similique soluta ullam vero. Accusantium ad adipisci alias aspernatur delectus deserunt dicta dolore ducimus eos est excepturi facere facilis fugit id illo inventore iusto laboriosam maiores neque obcaecati odit officia officiis placeat possimus quas, quisquam quod recusandae reprehenderit repudiandae rerum sequi sint tempore veniam veritatis vitae voluptas voluptates. Aspernatur doloribus inventore ipsa modi necessitatibus optio praesentium, suscipit veniam? Commodi culpa dolorum laborum rem suscipit. Accusantium ad animi architecto atque aut dolorum ea eos error explicabo facere illo magni maiores modi, nam nesciunt, officia perferendis perspiciatis, possimus quae quasi quibusdam repellendus sit soluta temporibus totam unde vero? Asperiores, assumenda commodi dolore eaque expedita fugiat harum labore modi nam obcaecati sed, sint voluptates? A ad asperiores earum et facere incidunt iure necessitatibus officiis tempora ut? Dignissimos dolorum ea perspiciatis quidem quis? Aspernatur distinctio, dolor eos exercitationem explicabo hic iste iure odit officia quod sed soluta totam voluptatum? Atque consectetur, culpa earum eos error expedita fugiat ipsa magnam nobis non odio placeat possimus quis recusandae saepe sed temporibus unde, vitae voluptate voluptatem.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium corporis doloribus incidunt modi necessitatibus nemo placeat quia recusandae reprehenderit suscipit, tempora voluptatem. Beatae debitis dolores esse illum nam nesciunt non obcaecati omnis quia recusandae, sequi vel. Adipisci animi at commodi consequuntur deserunt est ex fugiat illum ipsam iusto laboriosam magni molestias nihil nostrum odio officiis pariatur placeat quam quis quos repellat reprehenderit sint soluta, vel vero vitae, voluptatibus voluptatum. Alias dicta eius eligendi ipsum magni mollitia saepe, similique suscipit. Aliquid aperiam, autem, beatae dolores error eum exercitationem facere facilis fuga ipsam quae, quaerat sed similique voluptas voluptate voluptatem voluptates!
               </p>
             </div>
           </div>
         </div>
-      <div id="team">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maxime quidem quo voluptatem. Accusantium adipisci animi asperiores, assumenda beatae blanditiis cumque deleniti deserunt dolore dolores fuga ipsa laboriosam maxime modi mollitia nam nihil nulla praesentium quae quis sapiente soluta tempora ut, velit veniam! Aliquam consectetur dolores doloribus ex neque tempora. A adipisci animi aspernatur aut consequuntur deleniti dolorem ea eum harum illo ipsam libero magnam magni nam nostrum omnis placeat praesentium, quam qui quia quis quo rem saepe similique sit sunt veritatis! Adipisci asperiores aspernatur deleniti error est fugiat mollitia natus necessitatibus officiis. Deserunt ducimus eum facilis nihil odit veritatis.</p>
       </div>
-      </div>
-  </div>
+    </div>
+  <footer-part></footer-part>
 </template>
 
 <script>
-  import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar";
+import FooterPart from "@/components/FooterPart";
 export default {
-  components: {NavBar},
+  components: {FooterPart, NavBar},
   data() {
     return {
       text: 'DRAMKA'
@@ -59,11 +91,10 @@ export default {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: black;
   height: 100vh;
   color: white;
   display: flex;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url("/public/assets/bgnew.png");
+  //background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url("/public/assets/bgnew.png");
 }
 
 .glitch {
@@ -161,10 +192,17 @@ button, button:after{
 .author::before{
   content: "\2014\0020";
 }
+
+#about{
+  height: 100%;
+  width: 100%;
+}
+
 #instructions{
   height: 100%;
   width: 100%;
 }
+
 .row {
   display: flex;
   flex-direction: row;
@@ -178,8 +216,20 @@ button, button:after{
   flex-basis: 100%;
   flex: 1;
 }
+
+.about_text{
+  font-family: 'Caveat', cursive;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 2rem;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+}
+
 .instructions_theme{
   background-color: white;
-  color: black;
 }
 </style>
