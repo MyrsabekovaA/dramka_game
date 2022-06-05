@@ -1,7 +1,6 @@
 <template>
   <header :class="{'scrolled-nav' : scrollPosition}">
     <nav>
-<!--      <router-link class="link" v-if="/dramkagame" :to="{name: 'Home'}"><img src="assets/logo.svg"></router-link>-->
       <a class="link" href="#container"><img src="assets/logo.svg"></a>
       <ul class="navigation">
         <li><a class="glitchy" data-glitch="О команде" href="#team">О команде</a></li>
@@ -25,6 +24,8 @@ export default {
 <style lang="scss" scoped>
 header{
   background-color: transparent;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5));
+  backdrop-filter: blur(2px);
   z-index: 99;
   width: 100%;
   position: fixed;
