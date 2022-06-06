@@ -6,8 +6,17 @@
         <li><a class="glitchy" data-glitch="О команде" href="#team">О команде</a></li>
         <li><a class="glitchy" data-glitch="Инструкция" href="#instructions">Инструкция</a></li>
         <li class="player">
-          <button v-if="!isPlaying" @click="play">Музыка</button>
-          <button v-else @click="pause">Музыка</button>
+          <div class="player">
+            <div class="player-controls">
+              <div id="play">
+                <button style="background-color: transparent; border: none" v-on:click.prevent="playing = !playing" :title="(playing) ? 'Pause' : 'Play'" href="#">
+                  <i v-if="!playing" class="fa fa-volume-off" style="color: white"></i>
+                  <i v-else class="fa fa-volume-up" style="color: white"></i>
+                </button>
+              </div>
+              <audio :loop="looping" ref="audio" :src="'assets/music/music.mp3'" v-on:timeupdate="update" v-on:loadeddata="load" v-on:pause="playing = false" v-on:play="playing = true" preload="auto"></audio>
+            </div>
+          </div>
         </li>
       </ul>
     </nav>
@@ -15,46 +24,45 @@
 </template>
 
 <script>
-// var music = new Audio('/public/assets/music.mp3')
+
 export default {
   name: "NavBar",
   data() {
     return {
-      current: {},
-      index: 0,
-      isPlaying: false,
       scrollPosition: null,
-      songs: {src: require('/public/assets/music.mp3')},
-      player: new Audio()
+      audio: new Audio('assets/music/music.mp3'),
+      loaded: false,
+      looping: false,
+      playing: false,
     };
   },
-  // methods: {
-  //   play (song){
-  //   //   if (typeof song.src != "undefined") {
-  //   //   }
-  //   this.current = song;
-  //   this.player.src = this.current.src;
-  //
-  //   this.player.play();
-  //   this.player.addEventListener('ended', function () {
-  //     this.index++;
-  //     if (this.index > this.songs.length - 1) {
-  //       this.index = 0;
-  //     }
-  //     this.current = this.songs[this.index];
-  //     this.play(this.current);
-  //   }.bind(this));
-  //   this.isPlaying = true;
-  // },
-  // pause () {
-  //   this.player.pause();
-  //   this.isPlaying = false;
-  // },
-  // },
-  // created () {
-  //   this.current = this.songs[this.index];
-  //   this.player.src = this.current.src;
-  // }
+  props: {
+    file: {
+      type: String,
+      default: null
+    },
+  },
+  watch: {
+    playing(value) {
+      if (value) { return this.$refs.audio.play(); }
+      this.$refs.audio.pause();
+    },
+  },
+  methods: {
+    load() {
+      if (this.$refs.audio.readyState >= 2) {
+        this.loaded = true;
+        this.durationSeconds = parseInt(this.$refs.audio.duration);
+
+        return this.playing = this.autoPlay;
+      }
+
+      throw new Error('Failed to load sound file.');
+    },
+    update() {
+      this.currentSeconds = parseInt(this.$refs.audio.currentTime);
+    }
+  },
 };
 </script>
 
