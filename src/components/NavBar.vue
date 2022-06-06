@@ -3,7 +3,7 @@
     <nav>
       <a class="link" href="#container"><img src="assets/logo.svg"></a>
       <ul class="navigation" v-show="!mobile">
-        <li><a class="glitchy" data-glitch="О команде" href="#team">О команде</a></li>
+        <li><a class="glitchy" data-glitch="Об игре" href="#about">Об игре</a></li>
         <li><a class="glitchy" data-glitch="Инструкция" href="#instructions">Инструкция</a></li>
         <li class="player">
           <div class="player">
@@ -24,7 +24,7 @@
       </div>
       <transition name="mobile-nav">
         <ul class="dropdown" v-show="mobileNav">
-          <li><a class="glitchy" data-glitch="О команде" href="#team">О команде</a></li>
+          <li><a class="glitchy" data-glitch="Об игре" href="#about">Об игре</a></li>
           <li><a class="glitchy" data-glitch="Инструкция" href="#instructions">Инструкция</a></li>
           <li class="player">
             <div class="player">
