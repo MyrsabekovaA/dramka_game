@@ -1,6 +1,12 @@
 <template>
   <NavBar_game />
   <div id="game">
+<!--    <div>-->
+<!--      <img src="assets/characters/girl.svg" width="25">-->
+<!--      <img src="assets/characters/girl.svg" width="25">-->
+<!--      <img src="assets/characters/girl.svg" width="25">-->
+<!--      <img src="assets/characters/girl.svg" width="25">-->
+<!--    </div>-->
     <SwipeableCards v-for="card in cards"
                :key="card.id"
                v-on:swipe="onSwipe"
@@ -130,13 +136,13 @@ body {
 }
 .left {
   /*top: 1rem;*/
-  left: 1rem;
+  right: 1rem;
   /*transform: rotate(10deg);*/
 }
 
 .right {
   /*top: 1rem;*/
-  right: 1rem;
+  left: 1rem;
   /*transform: rotate(-10deg);*/
 }
 

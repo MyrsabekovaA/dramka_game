@@ -227,9 +227,30 @@ button, button:after{
   h2 {
     margin-bottom: 2rem;
   }
+  @media (max-width: 769px) {
+    font-size: 16px;
+  }
 }
 
 .instructions_theme{
   background-color: white;
 }
+
+@media (max-width: 769px) {
+  p{
+    font-size: 16px;
+  }
+}
+@media (max-width: 426px) {
+  .row{
+    display: block;
+  }
+  p{
+    font-size: 14px;
+  }
+  .author{
+    text-align: center;
+  }
+}
+
 </style>
