@@ -16,14 +16,14 @@
       <slot>
         <div class="card_body" v-if="cards.at(-1) == card">
           <h2><b>{{character(card.character_id).name}}</b></h2>
-          <div class="card_img">
+          <div class="card_img" :style="{backgroundImage: `url('/public/assets/backs/${card.back}')`}">
             <div class="answer left" :style="{opacity: left_opacity}">
               {{ card.actions.left.answer }}
             </div>
             <div class="answer right" :style="{opacity: right_opacity}">
               {{ card.actions.right.answer }}
             </div>
-            <img :src="`assets/characters/${card.character_id}/${card.icon}`" style="width: 240px; align-items:center; ">
+            <img :src="`assets/characters/${card.character_id}/${card.icon}`">
 
           </div>
           <p>{{card.text}}</p>
@@ -122,6 +122,8 @@ body {
 }
 .card_img img {
   margin-top: 30px;
+  width: 240px;
+  align-items:center;
 }
 .answer {
   position: absolute;

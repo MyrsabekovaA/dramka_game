@@ -12,6 +12,11 @@ const routes = [
         name: 'Game',
         component: () => import('../views/DramkaGame')
     },
+    {
+        path: '/achievements',
+        name: 'Achievements',
+        component: () => import('../views/Achievements')
+    },
 ];
 
 const router = createRouter({
