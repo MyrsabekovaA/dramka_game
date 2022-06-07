@@ -3,8 +3,9 @@
     <nav>
       <router-link class="link" :to="{name: 'Home'}"><img src="assets/logo.svg"></router-link>
       <ul class="navigation" v-show="!mobile">
-          <li><router-link class="glitchy" data-glitch="Об игре" :to="{name: 'Home',hash: '#team'}">Об игре</router-link></li>
+          <li><router-link class="glitchy" data-glitch="Об игре" :to="{name: 'Home'}">Об игре</router-link></li>
           <li><router-link class="glitchy" data-glitch="Инструкция" :to="{name: 'Home'}">Инструкция</router-link></li>
+        <li><router-link class="glitchy" data-glitch="Персонажи" to="/achievements">Персонажи</router-link></li>
           <li class="player">
           <div class="player">
             <div class="player-controls">
@@ -24,8 +25,9 @@
       </div>
       <transition name="mobile-nav">
         <ul class="dropdown" v-show="mobileNav">
-          <li><router-link class="glitchy" data-glitch="О команде" :to="{name: 'Home',hash: '#team'}">О команде</router-link></li>
-          <li><router-link class="glitchy" data-glitch="Инструкция" :to="{name: 'Home'}">Инструкция</router-link></li>
+          <li><router-link class="glitchy" data-glitch="О команде" to="/">О команде</router-link></li>
+          <li><router-link class="glitchy" data-glitch="Инструкция" to="/">Инструкция</router-link></li>
+          <li><router-link class="glitchy" data-glitch="Персонажи" to="/achievements">Персонажи</router-link></li>
           <li class="player">
             <div class="player">
               <div class="player-controls">

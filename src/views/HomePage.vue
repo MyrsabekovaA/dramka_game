@@ -15,11 +15,12 @@
         </div>
       </div>
       <div id="about">
-        <div class='row' style="height: 550px;">
+        <div class='row'>
           <div class='column' style="vertical-align: middle;
     align-items: center;
     padding-right: 260px;
     padding-top: 100px;
+
 }">
             <div class='about_theme'>
               <MiniDramkaGame />
@@ -27,7 +28,8 @@
           </div>
           <div class='column' style="vertical-align: middle;
     justify-content: center;
-    align-items: center">
+    align-items: center;
+    ">
             <div class='about_text'>
               <b>DRAMKA</b> - это карточная игра симулятора президента.
               <br/>
@@ -46,7 +48,7 @@
       </div>
       <div id="instructions">
         <div class='row' style="display: block">
-          <div class='column'>
+          <div class='column' style="padding-top: 0">
             <div class='instructions_text' style="color: white">
               <b>Инструкция</b>
               <br/>
@@ -60,21 +62,6 @@
           </div>
           </div>
       </div>
-<!--      <div id="team">-->
-<!--        <div class='row'>-->
-<!--          <div class='column'>-->
-<!--            <div class='instructionsv2_theme'>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class='column'>-->
-<!--            <div class='instructionsv2_text' style="color: white">-->
-<!--              <p>-->
-<!--                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium corporis doloribus incidunt modi necessitatibus nemo placeat quia recusandae reprehenderit suscipit, tempora voluptatem. Beatae debitis dolores esse illum nam nesciunt non obcaecati omnis quia recusandae, sequi vel. Adipisci animi at commodi consequuntur deserunt est ex fugiat illum ipsam iusto laboriosam magni molestias nihil nostrum odio officiis pariatur placeat quam quis quos repellat reprehenderit sint soluta, vel vero vitae, voluptatibus voluptatum. Alias dicta eius eligendi ipsum magni mollitia saepe, similique suscipit. Aliquid aperiam, autem, beatae dolores error eum exercitationem facere facilis fuga ipsam quae, quaerat sed similique voluptas voluptate voluptatem voluptates!-->
-<!--              </p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
     </div>
   <footer-part></footer-part>
 </template>
@@ -103,7 +90,6 @@ export default {
   height: 100vh;
   color: white;
   display: flex;
-  //background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url("/public/assets/bgnew.png");
 }
 
 .glitch {
@@ -272,7 +258,12 @@ button, button:after{
   }
   .author{
     text-align: center;
-  }
-}
+  } }
+@media (max-width: 426px) {
+  .column{
+    padding-top: 500px;
+  }}
+
+
 
 </style>

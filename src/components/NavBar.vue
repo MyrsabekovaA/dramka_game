@@ -5,6 +5,7 @@
       <ul class="navigation" v-show="!mobile">
         <li><a class="glitchy" data-glitch="Об игре" href="#about">Об игре</a></li>
         <li><a class="glitchy" data-glitch="Инструкция" href="#instructions">Инструкция</a></li>
+        <li><router-link class="glitchy" data-glitch="Персонажи" to="/achievements">Персонажи</router-link></li>
         <li class="player">
           <div class="player">
             <div class="player-controls">
@@ -26,6 +27,7 @@
         <ul class="dropdown" v-show="mobileNav">
           <li><a class="glitchy" data-glitch="Об игре" href="#about">Об игре</a></li>
           <li><a class="glitchy" data-glitch="Инструкция" href="#instructions">Инструкция</a></li>
+          <li><router-link class="glitchy" data-glitch="Персонажи" to="/achievements">Персонажи</router-link></li>
           <li class="player">
             <div class="player">
               <div class="player-controls">
