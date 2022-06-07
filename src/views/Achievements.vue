@@ -1,5 +1,5 @@
 <template>
-  <NavBar />
+  <NavBar_game />
   <div class="home">
       <div id="container">
         <div class="glitch">
@@ -48,12 +48,12 @@
 </template>
 
 <script>
-import NavBar from "../components/NavBar";
+import NavBar_game from "../components/NavBar_game";
 import FooterPart from "@/components/FooterPart";
 import characters from "../database/characters";
 
 export default {
-  components: {FooterPart, NavBar},
+  components: {FooterPart, NavBar_game},
   data() {
     return {
       text: 'Персонажи',

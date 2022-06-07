@@ -16,12 +16,7 @@
       </div>
       <div id="about">
         <div class='row'>
-          <div class='column' style="vertical-align: middle;
-    align-items: center;
-    padding-right: 260px;
-    padding-top: 100px;
-
-}">
+          <div class='column1'>
             <div class='about_theme'>
               <MiniDramkaGame />
             </div>
@@ -82,7 +77,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.home{
+  //min-height: 100%;
+  height: 100%;
+}
 #container {
   align-items: center;
   justify-content: center;
@@ -106,6 +104,43 @@ export default {
   position: absolute;
   top: -2.5rem;
   left: -10.5rem;
+}
+@media (min-width: 426px) {
+  #about{
+    min-height: 100%;
+  }
+}
+
+.column1{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  vertical-align: middle;
+  align-items: center;
+  padding-right: 260px;
+  @media (max-width: 1025px) {
+    padding-top: 50px;
+  }
+  @media (max-width: 769px) {
+    padding-right: 0;
+    padding-left: 60px;
+    align-items: normal;
+  }
+  @media (max-width: 426px) {
+    .about_text{
+      display: block;
+      padding-top: 20px;
+    }
+  }
+  @media (max-width: 376px) {
+    padding-left: 40px;
+  }
+}
+
+.about_text{
+  @media (max-width: 769px) {
+    font-size: 14px;
+  }
 }
 
 .glitch span:first-child {
@@ -188,14 +223,35 @@ button, button:after{
   content: "\2014\0020";
 }
 
-#about{
-  height: 100%;
+#about {
   width: 100%;
+  @media (max-width: 2561px) {
+    height: 405px;
+  }
+  @media (max-width: 1025px) {
+    height: 550px;
+    .about_theme {
+      padding-top: 20px;
+    }
+  }
+  @media (max-width: 426px) {
+    height: 920px;
+    //.about_theme {
+    //  padding-top: 20px;
+    //}
+  }
+  .row
+{
+  height: 100%;
 }
 
+}
 #instructions{
   height: 100%;
   width: 100%;
+  //@media (max-width: 426px) {
+  //  padding-top: 10px;
+  //}
 }
 
 .row {
@@ -261,7 +317,7 @@ button, button:after{
   } }
 @media (max-width: 426px) {
   .column{
-    padding-top: 500px;
+    padding-top: 420px;
   }}
 
 
