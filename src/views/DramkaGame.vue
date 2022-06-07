@@ -22,7 +22,7 @@
       <slot>
         <div class="card_body" v-if="cards.at(-1) == card">
           <h2><b>{{character(card.character_id).name}}</b></h2>
-          <div class="card_img" :style="{backgroundImage: `url('/public/assets/backs/${card.back}')`}">
+          <div class="card_img" :style="{backgroundImage: `url('assets/backs/${card.back}')`}">
             <div class="answer left" :style="{opacity: left_opacity}">
               {{ card.actions.left.answer }}
             </div>
@@ -48,6 +48,7 @@ import NavBar_game from "@/components/NavBar_game";
 import { SwipeableCards } from "../components/sw.js";
 import cards from "@/database/cards";
 import characters from "@/database/characters";
+import {mapGetters} from "vuex";
 
 export default {
   name: "DramkaGame",
@@ -60,8 +61,16 @@ export default {
       right_opacity: 0,
     };
   },
+  computed: {
+    ...mapGetters([
+            'current_card',
+    ])
+  },
   mounted() {
-    this.cards = cards;
+    this.cards = cards.filter(card => card.is_regular_deck);
+    if (this.current_card) {
+      this.cards[this.cards.length - 1] = this.current_card;
+    }
     // this.cards.push({ id: Math.random(), color: getRandomColor() });
     // this.cards.push({ id: Math.random(), color: getRandomColor() });
   },
@@ -70,9 +79,23 @@ export default {
       return characters.find(item => item.id === id)
     },
     onSwipe(direction) {
+      let actions = this.cards.at(-1).actions;
       this.right_opacity = 0
       this.left_opacity = 0
       console.log(direction);
+      if (direction === "swipe-right") {
+        if (actions.right.next_card_id) {
+          let new_card = cards.find(item => item.id === actions.right.next_card_id);
+          this.cards.splice(this.cards.length-1,0, new_card);
+          this.$store.dispatch('setCurrCard', new_card);
+        }
+      } else if (direction === "swipe-left") {
+        if (actions.left.next_card_id) {
+          let new_card = cards.find(item => item.id === actions.left.next_card_id);
+          this.cards.splice(this.cards.length-1,0, new_card);
+          this.$store.dispatch('setCurrCard', new_card);
+        }
+      }
       setTimeout(() => {
         this.cards.pop();
         // this.cards.unshift({ id: Math.random(), color: getRandomColor() });
@@ -123,13 +146,14 @@ body {
 .card_img{
   margin: 20px 0;
   padding: 0 30px;
-  background-image: url("/public/78792.jpg");
+  /*background-image: url("/public/78792.jpg");*/
   background-size: cover;
 }
 .card_img img {
   margin-top: 30px;
   width: 240px;
   align-items:center;
+  vertical-align: bottom;
 }
 .answer {
   position: absolute;
