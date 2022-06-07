@@ -545,15 +545,26 @@ export default [
         text: "Так или иначе, пройдемте внутрь, будем Вас знакомить. Начнем с 1 этажа. К Финансистам или к Здравоохранению?",
         icon: 'speech.svg',
         back: 'car_regular.png',
+        // is_regular_deck: false,
+        // actions: {
+        //     right: {
+        //         answer: "Финансистам",
+        //         next_card_id: 31,
+        //     },
+        //     left: {
+        //         answer: "Здравоохранение",
+        //         next_card_id: 32,
+        //     }
+        // }
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Финансистам",
-                next_card_id: 31,
+                answer: "",
+                next_card_id: null,
             },
             left: {
-                answer: "Здравоохранение",
-                next_card_id: 32,
+                answer: "",
+                next_card_id: null,
             }
         }
     },
