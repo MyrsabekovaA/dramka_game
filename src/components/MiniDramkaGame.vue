@@ -1,19 +1,12 @@
 <template>
-  <NavBar_game />
   <div id="game">
-<!--    <div>-->
-<!--      <img src="assets/characters/girl.svg" width="25">-->
-<!--      <img src="assets/characters/girl.svg" width="25">-->
-<!--      <img src="assets/characters/girl.svg" width="25">-->
-<!--      <img src="assets/characters/girl.svg" width="25">-->
-<!--    </div>-->
     <SwipeableCards v-for="card in cards"
                :key="card.id"
                v-on:swipe="onSwipe"
                @move="onMove"
                :style="{
         position: 'absolute',
-        height: 'auto',
+        height: '400px',
         width: '300px',
         backgroundColor: 'antiquewhite',
         borderRadius: '8px',
@@ -21,15 +14,15 @@
       }">
       <slot>
         <div class="card_body" v-if="cards.at(-1) == card">
-          <h2><b>{{character(card.character_id).name}}</b></h2>
-          <div class="card_img" :style="{backgroundImage: `url('/public/assets/backs/${card.back}')`}">
+          <h2><b>{{card.name}}</b></h2>
+          <div class="card_img" style="height: 250px" :style="{backgroundImage: 'url(' + card.bg + ')'}">
             <div class="answer left" :style="{opacity: left_opacity}">
               {{ card.actions.left.answer }}
             </div>
             <div class="answer right" :style="{opacity: right_opacity}">
               {{ card.actions.right.answer }}
             </div>
-            <img :src="`assets/characters/${card.character_id}/${card.icon}`">
+            <img :src="`assets/instructions/${card.icon}`" style="width: 240px; align-items:center; margin-top: 30px">
 
           </div>
           <p>{{card.text}}</p>
@@ -44,31 +37,33 @@
 </template>
 
 <script>
-import NavBar_game from "@/components/NavBar_game";
 import { SwipeableCards } from "../components/sw.js";
-import cards from "@/database/cards";
-import characters from "@/database/characters";
 
 export default {
   name: "DramkaGame",
-  components: { SwipeableCards, NavBar_game },
+  components: { SwipeableCards },
   data() {
     return {
-      cards: [],
-      src: require('/public/assets/characters/girl.svg'),
+      cards: [{
+        id: 1,
+        name: 'Пример',
+        text: 'Выберите ответ свайпом влево или вправо',
+        icon: 'swipe.png',
+        bg: 'assets/characters/3/wink.svg',
+        actions: {
+          right: {
+            answer: "Да",
+          },
+          left: {
+            answer: "Да",
+          }
+        }
+      }],
       left_opacity: 0,
       right_opacity: 0,
     };
   },
-  mounted() {
-    this.cards = cards;
-    // this.cards.push({ id: Math.random(), color: getRandomColor() });
-    // this.cards.push({ id: Math.random(), color: getRandomColor() });
-  },
   methods: {
-    character(id) {
-      return characters.find(item => item.id === id)
-    },
     onSwipe(direction) {
       this.right_opacity = 0
       this.left_opacity = 0
@@ -86,7 +81,6 @@ export default {
       } else if (params.x < 0) {
         this.left_opacity = -params.x / 100
       }
-      console.log(params);
     }
   },
 };
@@ -96,21 +90,13 @@ export default {
 body {
   margin: 0;
 }
-.card {
-  position: absolute;
-  height: 400px;
-  width: 300px;
-  border-radius: 8px;
-  /*background-color: antiquewhite;*/
-  /*background-image: url("/public/assets/characters/girl.svg");*/
-}
 #game {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  padding-top: 50px;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /*height: 100vh;*/
+  /*width: 100vw;*/
+  /*padding-top: 50px;*/
   font-family: 'Caveat', cursive;
 }
 
@@ -123,13 +109,10 @@ body {
 .card_img{
   margin: 20px 0;
   padding: 0 30px;
-  background-image: url("/public/78792.jpg");
   background-size: cover;
 }
 .card_img img {
   margin-top: 30px;
-  width: 240px;
-  align-items:center;
 }
 .answer {
   position: absolute;
