@@ -10,17 +10,21 @@
           </router-link>
         </div>
         <div class="quote">
-          <p class="text quoted">Ну как вы там потомки? Уже летаете на марс?</p>
+          <p class="text quoted">Ну как вы там, потомки? Высадились на марс?</p>
           <p class="author">Юрий Гагарин</p>
         </div>
       </div>
       <div id="about">
         <div class='row'>
-          <div class='column'>
+          <div class='column1'>
             <div class='about_theme'>
+              <MiniDramkaGame />
             </div>
           </div>
-          <div class='column'>
+          <div class='column' style="vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    ">
             <div class='about_text'>
               <b>DRAMKA</b> - это карточная игра симулятора президента.
               <br/>
@@ -38,34 +42,20 @@
         </div>
       </div>
       <div id="instructions">
-        <div class='row'>
-          <div class='column'>
+        <div class='row' style="display: block">
+          <div class='column' style="padding-top: 0">
             <div class='instructions_text' style="color: white">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium corporis doloribus incidunt modi necessitatibus nemo placeat quia recusandae reprehenderit suscipit, tempora voluptatem. Beatae debitis dolores esse illum nam nesciunt non obcaecati omnis quia recusandae, sequi vel. Adipisci animi at commodi consequuntur deserunt est ex fugiat illum ipsam iusto laboriosam magni molestias nihil nostrum odio officiis pariatur placeat quam quis quos repellat reprehenderit sint soluta, vel vero vitae, voluptatibus voluptatum. Alias dicta eius eligendi ipsum magni mollitia saepe, similique suscipit. Aliquid aperiam, autem, beatae dolores error eum exercitationem facere facilis fuga ipsam quae, quaerat sed similique voluptas voluptate voluptatem voluptates!
-              </p>
+              <b>Инструкция</b>
+              <br/>
+              <br/>
+              Все, что от тебя нужно - это свайпать влево или вправо
+              <br/>
+              Наведи на
+              <b>DRAMKA</b>
+              и начинай играть!
             </div>
           </div>
-          <div class='column'>
-            <div class='instructions_theme'>
-            </div>
           </div>
-          </div>
-      </div>
-      <div id="instructionsv2">
-        <div class='row'>
-          <div class='column'>
-            <div class='instructionsv2_theme'>
-            </div>
-          </div>
-          <div class='column'>
-            <div class='instructionsv2_text' style="color: white">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium corporis doloribus incidunt modi necessitatibus nemo placeat quia recusandae reprehenderit suscipit, tempora voluptatem. Beatae debitis dolores esse illum nam nesciunt non obcaecati omnis quia recusandae, sequi vel. Adipisci animi at commodi consequuntur deserunt est ex fugiat illum ipsam iusto laboriosam magni molestias nihil nostrum odio officiis pariatur placeat quam quis quos repellat reprehenderit sint soluta, vel vero vitae, voluptatibus voluptatum. Alias dicta eius eligendi ipsum magni mollitia saepe, similique suscipit. Aliquid aperiam, autem, beatae dolores error eum exercitationem facere facilis fuga ipsam quae, quaerat sed similique voluptas voluptate voluptatem voluptates!
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   <footer-part></footer-part>
@@ -74,8 +64,9 @@
 <script>
 import NavBar from "../components/NavBar";
 import FooterPart from "@/components/FooterPart";
+import MiniDramkaGame from "@/components/MiniDramkaGame";
 export default {
-  components: {FooterPart, NavBar},
+  components: {FooterPart, NavBar, MiniDramkaGame},
   data() {
     return {
       text: 'DRAMKA'
@@ -86,7 +77,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.home{
+  //min-height: 100%;
+  height: 100%;
+}
 #container {
   align-items: center;
   justify-content: center;
@@ -94,7 +88,6 @@ export default {
   height: 100vh;
   color: white;
   display: flex;
-  //background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url("/public/assets/bgnew.png");
 }
 
 .glitch {
@@ -111,6 +104,43 @@ export default {
   position: absolute;
   top: -2.5rem;
   left: -10.5rem;
+}
+@media (min-width: 426px) {
+  #about{
+    min-height: 100%;
+  }
+}
+
+.column1{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  vertical-align: middle;
+  align-items: center;
+  padding-right: 260px;
+  @media (max-width: 1025px) {
+    padding-top: 50px;
+  }
+  @media (max-width: 769px) {
+    padding-right: 0;
+    padding-left: 60px;
+    align-items: normal;
+  }
+  @media (max-width: 426px) {
+    .about_text{
+      display: block;
+      padding-top: 20px;
+    }
+  }
+  @media (max-width: 376px) {
+    padding-left: 40px;
+  }
+}
+
+.about_text{
+  @media (max-width: 769px) {
+    font-size: 14px;
+  }
 }
 
 .glitch span:first-child {
@@ -193,14 +223,35 @@ button, button:after{
   content: "\2014\0020";
 }
 
-#about{
-  height: 100%;
+#about {
   width: 100%;
+  @media (max-width: 2561px) {
+    height: 405px;
+  }
+  @media (max-width: 1025px) {
+    height: 550px;
+    .about_theme {
+      padding-top: 20px;
+    }
+  }
+  @media (max-width: 426px) {
+    height: 920px;
+    //.about_theme {
+    //  padding-top: 20px;
+    //}
+  }
+  .row
+{
+  height: 100%;
 }
 
+}
 #instructions{
   height: 100%;
   width: 100%;
+  //@media (max-width: 426px) {
+  //  padding-top: 10px;
+  //}
 }
 
 .row {
@@ -227,9 +278,48 @@ button, button:after{
   h2 {
     margin-bottom: 2rem;
   }
+  @media (max-width: 769px) {
+    font-size: 16px;
+  }
 }
 
-.instructions_theme{
-  background-color: white;
+.about_theme{
+
 }
+.instructions_text{
+    font-family: 'Caveat', cursive;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 2rem;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 769px) {
+      font-size: 16px;
+    }
+}
+@media (max-width: 769px) {
+  p{
+    font-size: 16px;
+  }
+}
+@media (max-width: 426px) {
+  .row{
+    display: block;
+  }
+  p{
+    font-size: 14px;
+  }
+  .author{
+    text-align: center;
+  } }
+@media (max-width: 426px) {
+  .column{
+    padding-top: 420px;
+  }}
+
+
+
 </style>

@@ -2,10 +2,47 @@
   <header :class="{'scrolled-nav' : scrollPosition}">
     <nav>
       <router-link class="link" :to="{name: 'Home'}"><img src="assets/logo.svg"></router-link>
-      <ul class="navigation">
-          <li><router-link class="glitchy" data-glitch="О команде" :to="{name: 'Home',hash: '#team'}">О команде</router-link></li>
+      <ul class="navigation" v-show="!mobile">
+          <li><router-link class="glitchy" data-glitch="Об игре" :to="{name: 'Home'}">Об игре</router-link></li>
           <li><router-link class="glitchy" data-glitch="Инструкция" :to="{name: 'Home'}">Инструкция</router-link></li>
+        <li><router-link class="glitchy" data-glitch="Персонажи" to="/achievements">Персонажи</router-link></li>
+          <li class="player">
+          <div class="player">
+            <div class="player-controls">
+              <div class="play">
+                <button style="background-color: transparent; border: none" v-on:click.prevent="playing = !playing" :title="(playing) ? 'Pause' : 'Play'" href="#">
+                  <i v-if="!playing" class="fa fa-volume-off" style="color: white"></i>
+                  <i v-else class="fa fa-volume-up" style="color: white"></i>
+                </button>
+              </div>
+              <audio :loop="looping" ref="audio" :src="'assets/music/music.mp3'" v-on:timeupdate="update" v-on:loadeddata="load" v-on:pause="playing = false" v-on:play="playing = true" preload="auto"></audio>
+            </div>
+          </div>
+        </li>
       </ul>
+      <div class="nav-icon">
+        <i @click="toggleMobileNav" v-show="mobile" class="fa fa-bars" :class="{'icon-active': mobileNav}"></i>
+      </div>
+      <transition name="mobile-nav">
+        <ul class="dropdown" v-show="mobileNav">
+          <li><router-link class="glitchy" data-glitch="О команде" to="/">О команде</router-link></li>
+          <li><router-link class="glitchy" data-glitch="Инструкция" to="/">Инструкция</router-link></li>
+          <li><router-link class="glitchy" data-glitch="Персонажи" to="/achievements">Персонажи</router-link></li>
+          <li class="player">
+            <div class="player">
+              <div class="player-controls">
+                <div class="play">
+                  <button style="background-color: transparent; border: none" v-on:click.prevent="playing = !playing" :title="(playing) ? 'Pause' : 'Play'" href="#">
+                    <i v-if="!playing" class="fa fa-volume-off" style="color: white"></i>
+                    <i v-else class="fa fa-volume-up" style="color: white"></i>
+                  </button>
+                </div>
+                <audio :loop="looping" ref="audio" :src="'assets/music/music.mp3'" v-on:timeupdate="update" v-on:loadeddata="load" v-on:pause="playing = false" v-on:play="playing = true" preload="auto"></audio>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </transition>
     </nav>
   </header>
 </template>
@@ -16,29 +53,67 @@ export default {
   data() {
     return {
       scrollPosition: null,
-        // hash: this.$route.hash,
+      audio: new Audio('assets/music/music.mp3'),
+      loaded: false,
+      looping: false,
+      playing: false,
+      mobile: null,
+      mobileNav: null,
+      windowWidth: null
     };
   },
-    // mounted() {
-    //     this.$nextTick(function () {
-    //         if (this.hash) {
-    //             const refName = this.hash.replace('#', '')
-    //             this.scrollToAnchorPoint(refName)
-    //         }
-    //     })
-    // },
-    // methods: {
-    //     scrollToAnchorPoint(refName) {
-    //         const el = this.$refs[refName]
-    //         el.scrollIntoView({ behavior: 'smooth' })
-    //     }
-    // }
+  props: {
+    file: {
+      type: String,
+      default: null
+    },
+  },
+  watch: {
+    playing(value) {
+      if (value) { return this.$refs.audio.play(); }
+      this.$refs.audio.pause();
+    },
+  },
+  created() {
+    window.addEventListener('resize', this.checkScreen);
+    this.checkScreen();
+  },
+  methods: {
+    load() {
+      if (this.$refs.audio.readyState >= 2) {
+        this.loaded = true;
+        this.durationSeconds = parseInt(this.$refs.audio.duration);
+
+        return this.playing = this.autoPlay;
+      }
+
+      throw new Error('Failed to load sound file.');
+    },
+    update() {
+      this.currentSeconds = parseInt(this.$refs.audio.currentTime);
+    },
+    toggleMobileNav() {
+      this.mobileNav = !this.mobileNav;
+    },
+    checkScreen() {
+      this.windowWidth = window.innerWidth;
+      if (this.windowWidth <= 750) {
+        this.mobile = true;
+        return;
+      }
+      this.mobile = false;
+      this.mobileNav = false;
+      return;
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 header{
   background-color: transparent;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5));
+  backdrop-filter: blur(2px);
   z-index: 99;
   width: 100%;
   position: fixed;
@@ -51,6 +126,9 @@ header{
     transition: .5s ease all;
     width: 90%;
     margin: 0 auto;
+    @media (min-width: 1140px) {
+      max-width: 1140px;
+    }
     ul, .link{
       font-weight: 500;
       color: #f1f1f1;
@@ -103,7 +181,6 @@ header{
         }
       }
     }
-    }
     img{
       display: flex;
       align-items: center;
@@ -115,7 +192,55 @@ header{
       flex: 1;
       justify-content: flex-end;
     }
+    .nav-icon{
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 24px;
+      height: 100%;
+
+      i{
+        cursor: pointer;
+        font-size: 24px;
+        transition: 0.8s ease all;
+      }
+    }
+
   }
+  .icon-active{
+    transform: rotate(180deg);
+  }
+
+  .dropdown{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    background-color: transparent;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(2px);
+    top: 84px;
+    right: 0;
+    li{
+      margin: 3px;
+
+    }
+  }
+
+  img{
+    display: flex;
+    align-items: center;
+    width: 60px;
+  }
+  .navigation{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+  }
+}
 @keyframes glitch {
   0% {
     transform: translate(0)

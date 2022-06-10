@@ -172,4 +172,11 @@ export default [
             smile: 'svg',
         },
     },
+    {
+        id: 11,
+        name: "DRAMKA",
+        icons: {
+            regular: 'svg',
+        },
+    },
 ]
