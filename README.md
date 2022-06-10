@@ -18,7 +18,7 @@ The actions take place at the present time. As the president of a fictional coun
 - You can turn on the music and immerse yourself in exciting adventures
 - Your progress is saved on the device, so when new update will come up you will continue from checkpoint
 
-[//]: # (![]&#40;&#41;)
+![](https://github.com/MyrsabekovaA/dramka_game/blob/dev/public/assets/gif.gif)
 
 ## TODO
 
