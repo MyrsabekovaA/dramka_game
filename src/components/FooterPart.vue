@@ -3,7 +3,7 @@
   <div class="footer_info">
     <div class="copyright">
       <span>Copyright ©
-      <a href="https://github.com/MyrsabekovaA/dramka_game" style="text-decoration: none; color: white"><b>DRAMKA</b></a>
+      <a href="https://github.com/MyrsabekovaA/dramka_game"><b>DRAMKA</b></a>
         2022
       </span>
     </div>
@@ -19,6 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 footer{
+  font-family: 'Sofia Sans', sans-serif;
   padding: 2rem 0;
   position: sticky;
 }
@@ -34,5 +35,9 @@ footer{
   color: white;
   text-decoration: none;
   list-style: none;
+}
+
+.copyright a{
+  color: white;
 }
 </style>

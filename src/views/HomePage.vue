@@ -1,86 +1,111 @@
 <template>
-  <NavBar />
+  <NavBar/>
   <div class="home">
-      <div id="container">
-        <div class="glitch">
-          <router-link style="color: #fff;" @mouseover="text = 'НАЧАТЬ'" @mouseleave="text = 'DRAMKA'" to="/dramkagame">
-            <span aria-hidden="true">{{ text }}</span>
-            <span>{{ text }}</span>
-            <span aria-hidden="true">{{ text }}</span>
-          </router-link>
-        </div>
-        <div class="quote">
-          <p class="text quoted">Ну как вы там, потомки? Высадились на марс?</p>
-          <p class="author">Юрий Гагарин</p>
-        </div>
+    <div id="container">
+      <div class="glitch">
+        <router-link style="color: #fff;" @mouseover="mouseover" @mouseleave="mouseleave" to="/dramkagame">
+          <span aria-hidden="true">{{ text }}</span>
+          <span>{{ text }}</span>
+          <span aria-hidden="true">{{ text }}</span>
+        </router-link>
       </div>
-      <div id="about">
-        <div class='row'>
-          <div class='column1'>
-            <div class='about_theme'>
-              <MiniDramkaGame />
-            </div>
+      <div class="quote">
+        <p class="text quoted">Well, how are you, descendants? Landed on Mars?</p>
+        <p class="author">Yuri Gagarin</p>
+      </div>
+    </div>
+    <div id="about">
+      <div class='row'>
+        <div class='column1'>
+          <div class='about_theme'>
+            <figure>
+              <img src="/assets/gif.gif">
+            </figure>
           </div>
-          <div class='column' style="vertical-align: middle;
+        </div>
+        <div class='column' style="vertical-align: middle;
     justify-content: center;
     align-items: center;
     ">
-            <div class='about_text'>
-              <b>DRAMKA</b> - это карточная игра симулятора президента.
-              <br/>
-              <br/>
-              Действия происходят в нынешнее время. Как президент вымышленной страны,
-              вы должны реагировать на события, которые предстанут перед вашим государством.
-              Каждое решение влияет на исход дальнейших событий по-разному.
-              Ваша цель состоит в том, чтобы управлять страной как можно больше лет.
-              Как только ваше царствование закончится, вы продолжаете править; однако, уже как новый президент.
-              В ваших руках судьба мира!
-              <br/>
-              Желаем удачи!
-            </div>
+          <div class='about_text'>
+            <b>DRAMKA</b> - it is a president simulator card game.
+            <br/>
+            <br/>
+            Actions are taking place at the present time. Like the president of a fictional country
+            you must react to the events that will appear before your state.
+            Each decision affects the outcome of further events in different ways.
+            Your goal is to rule the country for as many years as possible.
+            Once your reign is over, you continue to reign; however, already as a new president.
+            The fate of the world is in your hands!
+            <br/>
+            Good Luck!
           </div>
         </div>
       </div>
-      <div id="instructions">
-        <div class='row' style="display: block">
-          <div class='column' style="padding-top: 0">
-            <div class='instructions_text' style="color: white">
-              <b>Инструкция</b>
-              <br/>
-              <br/>
-              Все, что от тебя нужно - это свайпать влево или вправо
-              <br/>
-              Наведи на
-              <b>DRAMKA</b>
-              и начинай играть!
-            </div>
+    </div>
+    <div id="instructions">
+      <div class='row' style="display: block">
+        <div class='column' style="padding-top: 0">
+          <div class='instructions_text' style="color: white">
+            <b>Instruction</b>
+            <br/>
+            <br/>
+            All you have to do is swipe left or right
+            <br/>
+            Point to
+            <b>DRAMKA</b>
+            and start playing!
           </div>
-          </div>
+        </div>
       </div>
     </div>
+  </div>
   <footer-part></footer-part>
 </template>
 
 <script>
 import NavBar from "../components/NavBar";
 import FooterPart from "@/components/FooterPart";
-import MiniDramkaGame from "@/components/MiniDramkaGame";
+
 export default {
-  components: {FooterPart, NavBar, MiniDramkaGame},
+  components: {FooterPart, NavBar,},
   data() {
     return {
-      text: 'DRAMKA'
+      replace: 'START',
+      origin: 'DRAMKA',
+      text: 'DRAMKA',
+      interval_func: null,
     }
+  },
+  methods: {
+    mouseover: function () {
+      clearInterval(this.interval_func);
+      this.text = this.replace;
+    },
+    mouseleave: function () {
+      this.interval_func = setInterval(this.glitch_func, 1500);
+      this.text = this.origin;
+    },
+    glitch_func: function () {
+      this.text = this.replace;
+      setTimeout(() => {
+        this.text = this.origin;
+      }, 500)
+    },
+  },
+  mounted() {
+    this.interval_func = setInterval(this.glitch_func, 1500);
   },
   name: "HomePage",
 };
 </script>
 
 <style lang="scss" scoped>
-.home{
+.home {
   //min-height: 100%;
   height: 100%;
 }
+
 #container {
   align-items: center;
   justify-content: center;
@@ -105,21 +130,28 @@ export default {
   top: -2.5rem;
   left: -10.5rem;
 }
+
 @media (min-width: 426px) {
-  #about{
+  #about {
     min-height: 100%;
   }
 }
 
-.column1{
+img {
+  width: 600px;
+  height: 100%;
+}
+
+
+.column1 {
   display: flex;
   flex-direction: column;
   flex: 1;
   vertical-align: middle;
   align-items: center;
-  padding-right: 260px;
   @media (max-width: 1025px) {
     padding-top: 50px;
+    padding-left: 20px;
   }
   @media (max-width: 769px) {
     padding-right: 0;
@@ -127,17 +159,32 @@ export default {
     align-items: normal;
   }
   @media (max-width: 426px) {
-    .about_text{
+    padding: 0 10px;
+    img{
+      width: 400px;
+      height: 100%;
+    }
+    .about_text {
       display: block;
       padding-top: 20px;
     }
   }
   @media (max-width: 376px) {
-    padding-left: 40px;
+    padding: 0 10px;
+    img{
+      width: 350px;
+      height: 100%;
+    }
+  }
+  @media (max-width: 376px) {
+    img{
+      width: 300px;
+      height: 100%;
+    }
   }
 }
 
-.about_text{
+.about_text {
   @media (max-width: 769px) {
     font-size: 14px;
   }
@@ -198,28 +245,38 @@ export default {
     left: -8rem;
   }
 }
-button, button:after{
+
+button, button:after {
   width: 360px;
   height: 35px;
   font-size: 36px;
 }
-.quote{
+
+.quote {
   position: absolute;
   bottom: 20%;
-  p{
-    font-family: 'Caveat', cursive;
+
+  p {
+    font-family: 'Sofia Sans', sans-serif;
   }
 }
-.quoted::before{
+
+.quoted::before {
   content: "\201c";
   font-size: 30px;
   margin-bottom: -15px;
   margin-top: -20px;
 }
-.author{
+
+.quoted::after {
+  content: "\201c";
+}
+
+.author {
   text-align: right;
 }
-.author::before{
+
+.author::before {
   content: "\2014\0020";
 }
 
@@ -229,29 +286,35 @@ button, button:after{
     height: 405px;
   }
   @media (max-width: 1025px) {
-    height: 550px;
+    height: 500px;
     .about_theme {
       padding-top: 20px;
     }
   }
   @media (max-width: 426px) {
-    height: 920px;
-    //.about_theme {
-    //  padding-top: 20px;
-    //}
+    height: 500px;
+    .about_theme {
+      padding-top: 20px;
+    }
   }
-  .row
-{
-  height: 100%;
+  @media (max-width: 321px) {
+    height: 570px;
+    .about_theme {
+      padding-top: 20px;
+    }
+  }
+
+  .row {
+    height: 100%;
+  }
 }
 
-}
-#instructions{
+#instructions {
   height: 100%;
   width: 100%;
-  //@media (max-width: 426px) {
-  //  padding-top: 10px;
-  //}
+  @media (max-width: 426px) {
+    padding-top: 10px;
+  }
 }
 
 .row {
@@ -268,8 +331,8 @@ button, button:after{
   flex: 1;
 }
 
-.about_text{
-  font-family: 'Caveat', cursive;
+.about_text {
+  font-family: 'Sofia Sans', sans-serif;
   color: white;
   text-align: center;
   font-size: 18px;
@@ -278,48 +341,51 @@ button, button:after{
   h2 {
     margin-bottom: 2rem;
   }
+
   @media (max-width: 769px) {
     font-size: 16px;
   }
 }
 
-.about_theme{
+.instructions_text {
+  font-family: 'Sofia Sans', sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 2rem;
 
-}
-.instructions_text{
-    font-family: 'Caveat', cursive;
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    padding: 2rem;
+  h2 {
+    margin-bottom: 2rem;
+  }
 
-    h2 {
-      margin-bottom: 2rem;
-    }
-    @media (max-width: 769px) {
-      font-size: 16px;
-    }
-}
-@media (max-width: 769px) {
-  p{
+  @media (max-width: 769px) {
     font-size: 16px;
   }
 }
+
+@media (max-width: 769px) {
+  p {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 426px) {
-  .row{
+  .row {
     display: block;
   }
-  p{
+  p {
     font-size: 14px;
   }
-  .author{
+  .author {
     text-align: center;
-  } }
-@media (max-width: 426px) {
-  .column{
-    padding-top: 420px;
-  }}
+  }
+}
 
+//@media (min-width: 426px) {
+//  .column {
+//    padding-top: 420px;
+//  }
+//}
 
 
 </style>

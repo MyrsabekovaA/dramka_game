@@ -1,12 +1,6 @@
 <template>
   <NavBar_game />
   <div id="game">
-<!--    <div>-->
-<!--      <img src="assets/characters/girl.svg" width="25">-->
-<!--      <img src="assets/characters/girl.svg" width="25">-->
-<!--      <img src="assets/characters/girl.svg" width="25">-->
-<!--      <img src="assets/characters/girl.svg" width="25">-->
-<!--    </div>-->
     <SwipeableCards v-for="card in cards"
                :key="card.id"
                v-on:swipe="onSwipe"
@@ -24,10 +18,14 @@
           <h2><b>{{character(card.character_id).name}}</b></h2>
           <div class="card_img" :style="{backgroundImage: `url('assets/backs/${card.back}')`}">
             <div class="answer left" :style="{opacity: left_opacity}">
+              <div class="answer-text">
               {{ card.actions.left.answer }}
+              </div>
             </div>
             <div class="answer right" :style="{opacity: right_opacity}">
+              <div class="answer-text">
               {{ card.actions.right.answer }}
+              </div>
             </div>
             <img :src="`assets/characters/${card.character_id}/${card.icon}`">
 
@@ -134,7 +132,7 @@ body {
   height: 100vh;
   width: 100vw;
   padding-top: 50px;
-  font-family: 'Caveat', cursive;
+  font-family: 'Sofia Sans', sans-serif;
 }
 
 .card_body{
@@ -159,17 +157,25 @@ body {
   position: absolute;
   font-size: 18px;
   font-weight: bold;
+  width: 200px;
+  height: 50px;
+  background: rgb(255,255,255);
+  background-color: rgba(255,255,255, 0.8);
 }
+
+.answer-text {
+  padding: 10px 0;
+  text-align: center;
+}
+
 .left {
-  /*top: 1rem;*/
-  right: 1rem;
-  /*transform: rotate(10deg);*/
+  right: 0rem;
+  border-radius: 0 0 0 20px;
 }
 
 .right {
-  /*top: 1rem;*/
-  left: 1rem;
-  /*transform: rotate(-10deg);*/
+  left: 0rem;
+  border-radius: 0 0 20px 0;
 }
 
 .unknown {

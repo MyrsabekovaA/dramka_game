@@ -3,9 +3,9 @@
     <nav>
       <router-link class="link" :to="{name: 'Home'}"><img src="assets/logo.svg"></router-link>
       <ul class="navigation" v-show="!mobile">
-          <li><router-link class="glitchy" data-glitch="Об игре" :to="{name: 'Home'}">Об игре</router-link></li>
-          <li><router-link class="glitchy" data-glitch="Инструкция" :to="{name: 'Home'}">Инструкция</router-link></li>
-        <li><router-link class="glitchy" data-glitch="Персонажи" to="/achievements">Персонажи</router-link></li>
+          <li><router-link class="glitchy" data-glitch="About" :to="{name: 'Home'}">About</router-link></li>
+          <li><router-link class="glitchy" data-glitch="Instruction" :to="{name: 'Home'}">Instruction</router-link></li>
+        <li><router-link class="glitchy" data-glitch="Characters" to="/achievements">Characters</router-link></li>
           <li class="player">
           <div class="player">
             <div class="player-controls">
@@ -25,9 +25,9 @@
       </div>
       <transition name="mobile-nav">
         <ul class="dropdown" v-show="mobileNav">
-          <li><router-link class="glitchy" data-glitch="О команде" to="/">О команде</router-link></li>
-          <li><router-link class="glitchy" data-glitch="Инструкция" to="/">Инструкция</router-link></li>
-          <li><router-link class="glitchy" data-glitch="Персонажи" to="/achievements">Персонажи</router-link></li>
+          <li><router-link class="glitchy" data-glitch="About" to="/">About</router-link></li>
+          <li><router-link class="glitchy" data-glitch="Instruction" to="/">Instruction</router-link></li>
+          <li><router-link class="glitchy" data-glitch="Characters" to="/achievements">Characters</router-link></li>
           <li class="player">
             <div class="player">
               <div class="player-controls">
@@ -143,7 +143,7 @@ header{
     .glitchy{
       font: {
         size: 14px;
-        family: 'Raleway', sans-serif;
+        family: 'Sofia Sans', sans-serif;
       }
       text-decoration: none;
       text-transform: uppercase;

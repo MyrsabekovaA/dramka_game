@@ -3,7 +3,7 @@
   <div class="home">
       <div id="container">
         <div class="glitch">
-          <router-link style="color: #fff;" @mouseover="text = 'ЛИЦА'" @mouseleave="text = 'ПЕРСОНАЖИ'" to="/dramkagame">
+          <router-link style="color: #fff;" @mouseover="mouseover" @mouseleave="mouseleave" to="/dramkagame">
             <span aria-hidden="true">{{ text }}</span>
             <span>{{ text }}</span>
             <span aria-hidden="true">{{ text }}</span>
@@ -11,15 +11,15 @@
         </div>
         <div class="quote">
           <p class="text quoted">
-            Весь мир — театр.
+            All the world’s a stage,
             <br>
-            В нем женщины, мужчины — все актеры.
+            And all the men and women merely players;
             <br>
-            У них есть выходы, уходы.
+            They have their exits and their entrances;
             <br>
-            И каждый не одну играет роль.
+            And one man in his time plays many parts.
           </p>
-          <p class="author">Уильям Шекспир</p>
+          <p class="author">WILLIAM SHAKESPEARE</p>
         </div>
       </div>
       <div id="about" v-for="character in characters" :key="character.id">
@@ -56,9 +56,31 @@ export default {
   components: {FooterPart, NavBar_game},
   data() {
     return {
-      text: 'Персонажи',
+      replace: 'Persons',
+      origin: 'Characters',
+      text: 'Characters',
+      interval_func: null,
       characters,
     }
+  },
+  methods: {
+    mouseover: function () {
+      clearInterval(this.interval_func);
+      this.text = this.replace;
+    },
+    mouseleave: function () {
+      this.interval_func = setInterval(this.glitch_func, 1500);
+      this.text = this.origin;
+    },
+    glitch_func: function () {
+      this.text = this.replace;
+      setTimeout(() => {
+        this.text = this.origin;
+      }, 500)
+    },
+  },
+  mounted() {
+    this.interval_func = setInterval(this.glitch_func, 1500);
   },
   name: "HomePage",
 };
@@ -156,7 +178,7 @@ button, button:after{
   position: absolute;
   bottom: 20%;
   p{
-    font-family: 'Caveat', cursive;
+    font-family: 'Sofia Sans', sans-serif;
   }
 }
 .quoted::before{
@@ -165,6 +187,19 @@ button, button:after{
   margin-bottom: -15px;
   margin-top: -20px;
 }
+
+.quoted::after {
+  content: "\201c";
+}
+
+.author {
+  text-align: right;
+}
+
+.author::before {
+  content: "\2014\0020";
+}
+
 
 
 #about{
@@ -191,7 +226,7 @@ button, button:after{
 }
 
 .about_text{
-  font-family: 'Caveat', cursive;
+  font-family: 'Sofia Sans', sans-serif;
   color: white;
   text-align: center;
   font-size: 18px;

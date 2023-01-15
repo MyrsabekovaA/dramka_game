@@ -3,9 +3,9 @@
     <nav>
       <a class="link" href="#container"><img src="assets/logo.svg"></a>
       <ul class="navigation" v-show="!mobile">
-        <li><a class="glitchy" data-glitch="Об игре" href="#about">Об игре</a></li>
-        <li><a class="glitchy" data-glitch="Инструкция" href="#instructions">Инструкция</a></li>
-        <li><router-link class="glitchy" data-glitch="Персонажи" to="/achievements">Персонажи</router-link></li>
+        <li><a class="glitchy" data-glitch="About" href="#about">About</a></li>
+        <li><a class="glitchy" data-glitch="Instruction" href="#instructions">Instruction</a></li>
+        <li><router-link class="glitchy" data-glitch="Characters" to="/achievements">Characters</router-link></li>
         <li class="player">
           <div class="player">
             <div class="player-controls">
@@ -25,9 +25,9 @@
       </div>
       <transition name="mobile-nav">
         <ul class="dropdown" v-show="mobileNav">
-          <li><a class="glitchy" data-glitch="Об игре" href="#about">Об игре</a></li>
-          <li><a class="glitchy" data-glitch="Инструкция" href="#instructions">Инструкция</a></li>
-          <li><router-link class="glitchy" data-glitch="Персонажи" to="/achievements">Персонажи</router-link></li>
+          <li><a class="glitchy" data-glitch="About" href="#about">About</a></li>
+          <li><a class="glitchy" data-glitch="Instruction" href="#instructions">Instruction</a></li>
+          <li><router-link class="glitchy" data-glitch="Characters" to="/achievements">Characters</router-link></li>
           <li class="player">
             <div class="player">
               <div class="player-controls">
@@ -145,7 +145,7 @@ header{
     .glitchy{
       font: {
         size: 14px;
-        family: 'Raleway', sans-serif;
+        family: 'Sofia Sans', sans-serif;
       }
       text-decoration: none;
       text-transform: uppercase;
@@ -251,14 +251,4 @@ header{
     transform: translate(0)
   }
 }
-//
-//@media (max-width: 500px) {
-//  header nav .link{
-//    font-size: 10px;
-//  }
-//  header nav li {
-//    padding: 4px;
-//    margin-left: 8px;
-//  }
-//}
 </style>

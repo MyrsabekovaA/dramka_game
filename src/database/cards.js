@@ -2,7 +2,7 @@ export default [
     {
         id: 2,
         character_id: 11,
-        text: "Поздравляю, вы прошли Пролог, продолжение истории будет в следующих обновлениях",
+        text: "Congratulations, you have passed the Prologue, the continuation of the story will be in the next updates",
         icon: 'regular.svg',
         back: 'stars.svg',
         is_regular_deck: true,
@@ -20,17 +20,17 @@ export default [
     {
         id: 1,
         character_id: 3,
-        text: "Здравствуйте, мистер Президент. Вы только что отошли от комы, врачи говорят, у Вас могут быть кратковременные провалы в памяти.",
+        text: "Hello, Mr. President. You have just recovered from a coma, doctors say you may have short-term memory lapses.",
         icon: 'report_smile.svg',
         back: 'hospital1.png',
         is_regular_deck: true,
         actions: {
             right: {
-                answer: "Провалы в памяти?",
+                answer: "Memory lapses?",
                 next_card_id: 4,
             },
             left: {
-                answer: "Что произошло?",
+                answer: "What happened?",
                 next_card_id: 3,
             }
         }
@@ -38,17 +38,17 @@ export default [
     {
         id: 3,
         character_id: 3,
-        text: "Вас нашли на в заброшенной хижине в лесу бес сознания. Вас оперативно доставили в больницу, где вы провели последние два месяца.",
+        text: "You were found in an abandoned hut in the forest without consciousness. You were promptly taken to the hospital where you spent the last two months.",
         icon: 'hands_up.svg',
         back: 'hospital1.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "У меня была семья?",
+                answer: "Did I have a family?",
                 next_card_id: 9,
             },
             left: {
-                answer: "Что дальше?",
+                answer: "What's next?",
                 next_card_id: 8,
             }
         }
@@ -56,17 +56,17 @@ export default [
     {
         id: 4,
         character_id: 3,
-        text: "При проведении МРТ Ваш мозг светился как новогодняя ёлка. Наши спецы пока ничего не понимают, но предупреждают, что после такого память может шалить.",
+        text: "During the MRI, your brain glowed like a Christmas tree. Our specialists do not understand anything yet, but they warn that after such a memory can be naughty.",
         icon: 'small_smile.svg',
         back: 'hospital1.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Я стану овощем?",
+                answer: "Will I become a vegetable?",
                 next_card_id: 5,
             },
             left: {
-                answer: "Что произошло?",
+                answer: "What happened?",
                 next_card_id: 3,
             }
         }
@@ -74,17 +74,17 @@ export default [
     {
         id: 5,
         character_id: 3,
-        text: "Конечно же нет, повторное МРТ показало спад этой самой активности. Врачи говорят все функции мозга в скором времени придут в норму.",
+        text: "Of course not, repeated MRI showed a decline in this very activity. Doctors say all brain functions will soon return to normal.",
         icon: 'wink.svg',
         back: 'hospital1.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Не напомните кто вы?",
+                answer: "Don't remind me who you are?",
                 next_card_id: 6,
             },
             left: {
-                answer: "Что произошло?",
+                answer: "What happened?",
                 next_card_id: 3,
             }
         }
@@ -92,17 +92,17 @@ export default [
     {
         id: 6,
         character_id: 3,
-        text: "Ахахах с превеликим удовольствием. Мое имя Уилсон, Вы же чаще называли меня Уил. Я Премьер Министр и так же ваша правая рука и друг.",
+        text: "Ahahah with great pleasure. My name is Wilson, you used to call me Wil more often. I am the Prime Minister and also your right hand and friend.",
         icon: 'blind_small_smile.svg',
         back: 'hospital1.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Кто я?",
+                answer: "Who am I?",
                 next_card_id: 7,
             },
             left: {
-                answer: "Что произошло?",
+                answer: "What happened?",
                 next_card_id: 3,
             }
         }
@@ -110,17 +110,17 @@ export default [
     {
         id: 7,
         character_id: 3,
-        text: "Все оказалось хуже чем я думал. Вы, мой дорогой друг, выбраны народом, чтобы руководить страной и вести всех нас к светлому будущему,",
+        text: "Everything turned out to be worse than I thought. You, my dear friend, have been chosen by the people to lead the country and lead us all to a brighter future,",
         icon: 'speech.svg',
         back: 'hospital1.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Нужно наладить контакты",
+                answer: "We need to establish contacts",
                 next_card_id: 8,
             },
             left: {
-                answer: "Что дальше?",
+                answer: "What's next?",
                 next_card_id: 8,
             }
         }
@@ -128,17 +128,17 @@ export default [
     {
         id: 8,
         character_id: 3,
-        text: "Похоже мне нужно заново познакомить вас с вашим аппаратом или Вы предпочтете придти в себя в кругу семьи? ",
+        text: "It looks like I need to re-introduce you to your device, or would you prefer to come to your senses with your family? ",
         icon: 'regular_phone.svg',
         back: 'hospital1.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "У меня была семья?",
+                answer: "Did I have a family?",
                 next_card_id: 9,
             },
             left: {
-                answer: "Государство превыше всего",
+                answer: "The state is above all",
                 next_card_id: 10,
             }
         }
@@ -146,17 +146,17 @@ export default [
     {
         id: 9,
         character_id: 3,
-        text: "Конечно была и ЕСТЬ! Они как раз ждут за дверью, одно Ваше слово и я открою эту дверь",
+        text: "Of course it was and is! They are just waiting outside the door, one word from you and I will open this door",
         icon: 'wink.svg',
         back: 'hospital1.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Почему ты их \n сразу не впустил?",
+                answer: "Why didn't you let them in right away?",
                 next_card_id: 11,
             },
             left: {
-                answer: "Будь добр, открой дверь",
+                answer: "Please open the door",
                 next_card_id: 13,
             }
         }
@@ -164,17 +164,17 @@ export default [
     {
         id: 10,
         character_id: 3,
-        text: "Отлично, сейчас вызову водителя и поедем Вас знакомить",
+        text: "Great, I'll call the driver now and let's go introduce you",
         icon: 'regular_phone.svg',
         back: 'hospital1.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Все же сначала я хочу увидеть семью",
+                answer: "I still want to see my family first",
                 next_card_id: 9,
             },
             left: {
-                answer: "В дорогу!",
+                answer: "On the road!",
                 next_card_id: 12,
             }
         }
@@ -182,17 +182,17 @@ export default [
     {
         id: 11,
         character_id: 3,
-        text: "Вы же понимаете, что по протоколу я должен первый убедится в Вашем добром здравии",
+        text: "You understand that according to the protocol I have to be the first to make sure of your good health",
         icon: 'report.svg',
         back: 'hospital1.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Семья может подождать",
+                answer: "Family can wait",
                 next_card_id: 12,
             },
             left: {
-                answer: "Будь добр, открой дверь",
+                answer: "Please open the door",
                 next_card_id: 13,
             }
         }
@@ -200,17 +200,17 @@ export default [
     {
         id: 12,
         character_id: 3,
-        text: "Пока вас не было многое успело поменяться. В государстве сущий хаос. Так еще и вирус новый всплыл, вроде бы ничего серьезного, но в Китае говорят все парализовало из-за него.",
+        text: "While you were away, a lot of things managed to change. The state is in complete chaos. So also a new virus has surfaced, it seems to be nothing serious, but in China they say everything was paralyzed because of it.",
         icon: 'report.svg',
         back: 'car_regular.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Вирус?",
+                answer: "Virus?",
                 next_card_id: 21,
             },
             left: {
-                answer: "Расскажи о тех к кому мы едем",
+                answer: "Tell us about those we are going to",
                 next_card_id: 22,
             }
         }
@@ -218,17 +218,17 @@ export default [
     {
         id: 13,
         character_id: 1,
-        text: "Привет, милый! Мы очень соскучились",
+        text: "Hi, honey! We really missed you",
         icon: 'smile.svg',
         back: 'hospital2.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Привет, Софи",
+                answer: "Hello, Sophie",
                 next_card_id: 14,
             },
             left: {
-                answer: "Привет",
+                answer: "Hello",
                 next_card_id: 15,
             }
         }
@@ -236,17 +236,17 @@ export default [
     {
         id: 14,
         character_id: 1,
-        text: "Если бы меня не предупредили врачи насчет твоей амнезии. В тебя бы уже летело что-нибудь тяжелое. На всякий случай напомню мое имя Люси.",
+        text: "If the doctors hadn't warned me about your amnesia. Something heavy would have been flying at you by now. Just in case, I'll remind you my name is Lucy.",
         icon: 'smirk.svg',
         back: 'hospital2.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Промолчать",
+                answer: "Keep silent",
                 next_card_id: 15,
             },
             left: {
-                answer: "Не знаю что на меня нашло",
+                answer: "I don't know what came over me",
                 next_card_id: 15,
             }
         }
@@ -254,17 +254,17 @@ export default [
     {
         id: 15,
         character_id: 5,
-        text: "Привет, пап. Я твой любимый Галчонок. Очень рада, что ты пришел в себя. В интернете я видела очень много статей о твоей смерти, я впервые рада тому что в интернете все врут.",
+        text: "Hi, Dad. I'm your favorite Jackdaw. I am very glad that you have come to your senses. I've seen a lot of articles about your death on the Internet, I'm glad for the first time that everyone is lying on the Internet.",
         icon: 'greetings.svg',
         back: 'hospital3.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Уилсон!",
+                answer: "Wilson!",
                 next_card_id: 16,
             },
             left: {
-                answer: "Как дела в школе?",
+                answer: "How are things at school?",
                 next_card_id: 17,
             }
         }
@@ -272,17 +272,17 @@ export default [
     {
         id: 16,
         character_id: 3,
-        text: "Смотрю память постепенно приходит к Вам. Я очень рад. Ну так что, поедем в правительство или вы еще проведете время с семьей?",
+        text: "I see the memory is gradually coming to you. I am very happy. So, shall we go to the government or will you still spend time with your family?",
         icon: 'wink.svg',
         back: 'hospital1.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Поехали",
+                answer: "Let's go",
                 next_card_id: 12,
             },
             left: {
-                answer: "Я сообщу как буду готов",
+                answer: "I'll let you know when I'm ready",
                 next_card_id: 18,
             }
         }
@@ -290,17 +290,17 @@ export default [
     {
         id: 17,
         character_id: 5,
-        text: "Да потихонечку помаленечку. скоро у нас будут экзамены, я конечно готовлюсь. Но ко всему нельзя же быть готовым",
+        text: "Yes, little by little. soon we will have exams, of course I am preparing. But you can't be ready for everything",
         icon: 'closed_eyes.svg',
         back: 'hospital3.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Уилсон!",
+                answer: "Wilson!",
                 next_card_id: 16,
             },
             left: {
-                answer: "Люси",
+                answer: "Lucy",
                 next_card_id: 18,
             }
         }
@@ -308,17 +308,17 @@ export default [
     {
         id: 18,
         character_id: 1,
-        text: "Уилсон подождите пожалуйста снаружи.",
+        text: "Wilson, please wait outside.",
         icon: 'regular2.svg',
         back: 'hospital2.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Ничего не делать",
+                answer: "Do nothing",
                 next_card_id: 19,
             },
             left: {
-                answer: "Пусть останется",
+                answer: "Let it stay",
                 next_card_id: 19,
             }
         }
@@ -326,17 +326,17 @@ export default [
     {
         id: 19,
         character_id: 1,
-        text: "Так  рада тебя увидеть. Честно я очень боялась за тебя. У меня так много вопросов, но увы ответы ты не помнишь. Чтож дорогой, ты пока отдохни, не будем тебя с Галчонком тревожить. Мы тебя сильно любим",
+        text: "So glad to see you. Honestly, I was very afraid for you. I have so many questions, but alas, you don't remember the answers. Well, dear, you have a rest for now, we won't bother you with a Galchon. We love you very much",
         icon: 'smile.svg',
         back: 'hospital2.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "На сегодня довольно, нужно отдохнуть",
+                answer: "That's enough for today, we need to rest",
                 next_card_id: 20,
             },
             left: {
-                answer: "Уилсон Поехали",
+                answer: "Wilson Let's go",
                 next_card_id: 12,
             }
         }
@@ -344,17 +344,17 @@ export default [
     {
         id: 20,
         character_id: 3,
-        text: "Доброе утро, мистер Президент. Все в сборе ждут только Вас. За время вашего отсутствие многое успело произойти. Нам пора",
+        text: "Good morning, Mr. President. Everyone is waiting only for you. A lot has happened during your absence. We have to go",
         icon: 'regular.svg',
         back: 'hospital1.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Подожди внизу, я спущусь",
+                answer: "Wait downstairs, I'll come down",
                 next_card_id: 12,
             },
             left: {
-                answer: "Поехали",
+                answer: "Let's go",
                 next_card_id: 12,
             }
         }
@@ -362,17 +362,17 @@ export default [
     {
         id: 21,
         character_id: 3,
-        text: "Под новый год в Китае обнаружили новый штамм вируса. Как я понял он не страшнее обычного  гриппа, просто заразнее, но лучше вам проконсультироваться с нашим министром здравоохранения – Виталием Павловичем",
+        text: "A new strain of the virus was discovered in China on New Year's Eve. As I understand it, it is not worse than the usual flu, just more contagious, but it is better for you to consult with our Minister of Health – Vitaly Pavlovich",
         icon: 'report.svg',
         back: 'car_regular.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Достаточно",
+                answer: "Enough",
                 next_card_id: 26,
             },
             left: {
-                answer: "Расскажи подробнее о министре",
+                answer: "Tell us more about the minister",
                 next_card_id: 22,
             }
         }
@@ -380,17 +380,17 @@ export default [
     {
         id: 22,
         character_id: 6,
-        text: "Виталий Павлович на посту министра здравоохранения уже третий год. За время руководства он существенно продвинул медицину в стране.",
+        text: "Vitaly Pavlovich has been the Minister of Health for the third year. During his leadership, he has significantly advanced medicine in the country.",
         icon: 'regular.svg',
         back: 'stars.svg',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Достаточно",
+                answer: "Enough",
                 next_card_id: 26,
             },
             left: {
-                answer: "Расскажи еще",
+                answer: "Tell me more",
                 next_card_id: 23,
             }
         }
@@ -398,17 +398,17 @@ export default [
     {
         id: 23,
         character_id: 8,
-        text: "Елена Анатольевна – Министр финансов, для населения зло во плоти, при любом изменении рынка кто-то теряет и в глазах людей она главное зло капиталистического мира",
+        text: "Elena Anatolyevna is the Minister of Finance, evil is in the flesh for the population, with any change in the market someone loses and in the eyes of people she is the main evil of the capitalist world",
         icon: 'regular.svg',
         back: 'stars.svg',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Достаточно",
+                answer: "Enough",
                 next_card_id: 26,
             },
             left: {
-                answer: "Расскажи еще",
+                answer: "Tell me more",
                 next_card_id: 24,
             }
         }
@@ -416,17 +416,17 @@ export default [
     {
         id: 24,
         character_id: 9,
-        text: "Петр Алексеевич – Министр науки и просвещения. Не единожды выручал нас. Очень толковый парень. Предположительно у него и министра иностранных дел роман.",
+        text: "Pyotr Alekseevich is the Minister of Science and Education. He helped us out more than once. A very smart guy. Presumably he and the Foreign Minister are having an affair.",
         icon: 'regular.svg',
         back: 'stars.svg',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Достаточно",
+                answer: "Enough",
                 next_card_id: 26,
             },
             left: {
-                answer: "Министр иностранных дел?",
+                answer: "Foreign Minister?",
                 next_card_id: 25,
             }
         }
@@ -434,17 +434,17 @@ export default [
     {
         id: 25,
         character_id: 7,
-        text: "Олеся Семенова – Министр внутренних дел. Всей нашей внешней политике мы благодарны ей. Всегда умеет разрядить даже самую накаленную обстановку",
+        text: "Olesya Semenova is the Minister of Internal Affairs. We are grateful to her for all our foreign policy. Always able to defuse even the most heated situation",
         icon: 'regular.svg',
         back: 'stars.svg',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Достаточно",
+                answer: "Enough",
                 next_card_id: 26,
             },
             left: {
-                answer: "Кажется я узнаю это место",
+                answer: "I think I recognize this place",
                 next_card_id: 26,
             }
         }
@@ -452,17 +452,17 @@ export default [
     {
         id: 26,
         character_id: 3,
-        text: "Мы уже подъезжаем. Это здание правительства, за последние годы вы провели здесь времени больше чем в кровати",
+        text: "We are already approaching. This is the government building, in recent years you have spent more time here than in bed",
         icon: 'regular.svg',
         back: 'car_regular.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Выйти из машины",
+                answer: "Get out of the car",
                 next_card_id: 30,
             },
             left: {
-                answer: "Хорошая шутка",
+                answer: "Good joke",
                 next_card_id: 27,
             }
         }
@@ -470,17 +470,17 @@ export default [
     {
         id: 27,
         character_id: 3,
-        text: "Отнюдь, это не шутка, почти каждый день и ночь вы проводите на работе. В народе даже пошел слух...",
+        text: "By no means, this is not a joke, you spend almost every day and night at work. There was even a rumor among the people...",
         icon: 'report_smile.svg',
         back: 'car_regular.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Выйти из машины",
+                answer: "Get out of the car",
                 next_card_id: 30,
             },
             left: {
-                answer: "Слух?",
+                answer: "Hearing?",
                 next_card_id: 28,
             }
         }
@@ -488,17 +488,17 @@ export default [
     {
         id: 28,
         character_id: 3,
-        text: "Что-то я разболтался на сегодня, я думаю все же вы не захотите это услышать",
+        text: "I've been talking too much for today, I still don't think you want to hear it",
         icon: 'report_smile.svg',
         back: 'car_regular.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Выйти из машины",
+                answer: "Get out of the car",
                 next_card_id: 30,
             },
             left: {
-                answer: "Все же, я настаиваю",
+                answer: "Still, I insist",
                 next_card_id: 29,
             }
         }
@@ -506,17 +506,17 @@ export default [
     {
         id: 29,
         character_id: 3,
-        text: "Нуу эээ... В народе бытует мнение о том, что ваш брак фиктивный, и что вы не видитесь со своей женой, что Вы предпочтете ночь в кабинете за работой над проблемами страны, ночи на брачном ложе...",
+        text: "Well, uh... There is an opinion among the people that your marriage is fictitious, and that you do not see your wife, that you would prefer a night in the office working on the problems of the country, a night on the marriage bed ...",
         icon: 'speech.svg',
         back: 'car_regular.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Выйти из машины",
+                answer: "Get out of the car",
                 next_card_id: 30,
             },
             left: {
-                answer: "Приму к сведению",
+                answer: "I'll take note",
                 next_card_id: 30,
             }
         }
@@ -524,17 +524,17 @@ export default [
     {
         id: 30,
         character_id: 3,
-        text: "А вот и наша обитель. великое и могущественное здание правительства нашего государства!",
+        text: "And here is our abode. the great and powerful government building of our state!",
         icon: 'wink.svg',
         back: 'car_regular.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Впечатляет",
+                answer: "Impressive",
                 next_card_id: 31,
             },
             left: {
-                answer: "Не впечатляет",
+                answer: "Not impressive",
                 next_card_id: 31,
             }
         }
@@ -542,20 +542,9 @@ export default [
     {
         id: 31,
         character_id: 3,
-        text: "Так или иначе, пройдемте внутрь, будем Вас знакомить. Начнем с 1 этажа. К Финансистам или к Здравоохранению?",
+        text: "Anyway, let's go inside, we'll introduce you. Let's start from the 1st floor. To Financiers or to Healthcare?",
         icon: 'speech.svg',
         back: 'car_regular.png',
-        // is_regular_deck: false,
-        // actions: {
-        //     right: {
-        //         answer: "Финансистам",
-        //         next_card_id: 31,
-        //     },
-        //     left: {
-        //         answer: "Здравоохранение",
-        //         next_card_id: 32,
-        //     }
-        // }
         is_regular_deck: false,
         actions: {
             right: {
@@ -571,7 +560,7 @@ export default [
     {
         id: 32,
         character_id: 9,
-        text: "Здравствуйте, уважаемый президент. Рад видеть вас биологически цельным",
+        text: "Hello, dear President. Glad to see you biologically whole",
         icon: 'regular.svg',
         back: 'lab.png',
         is_regular_deck: false,
@@ -589,17 +578,17 @@ export default [
     {
         id: 33,
         character_id: 8,
-        text: "Ой. здравствуйте, господин Президент. Я так рада что вы в добром здравии.",
-        icon: 'desk_greetings.svg',
+        text: "Oh. hello, Mr. President. I'm so glad you're in good health.",
+        icon: 'desk_greatings.svg',
         back: 'speech_room.png',
         is_regular_deck: false,
         actions: {
             right: {
-                answer: "Здравствуйте, Светлана Аркадьевна",
+                answer: "Hello, Svetlana Arkadyevna",
                 next_card_id: null,
             },
             left: {
-                answer: "Здравствуйте, Елена Анатольевна",
+                answer: "Hello, Elena Anatolyevna",
                 next_card_id: null,
             }
         }

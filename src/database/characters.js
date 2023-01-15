@@ -1,7 +1,7 @@
 export default [
     {
         id: 1,
-        name: "Люси",
+        name: "Lucy, Wife",
         icons: {
             regular: 'svg',
             smirk: 'svg',
@@ -14,7 +14,7 @@ export default [
     },
     {
         id: 2,
-        name: "PR менеджер",
+        name: "PR manager",
         icons: {
             call: 'svg',
             wink_coffee: 'svg',
@@ -31,7 +31,7 @@ export default [
     },
     {
         id: 3,
-        name: "Премьер",
+        name: "Premier",
         icons: {
             big_smile: 'svg',
             blind_small_smile: 'svg',
@@ -49,7 +49,7 @@ export default [
     },
     {
         id: 4,
-        name: "Министр ВС",
+        name: "Minister of the Armed Forces",
         icons: {
             call: 'svg',
             chart: 'svg',
@@ -66,7 +66,7 @@ export default [
     },
     {
         id: 5,
-        name: "Дочь Галчонок",
+        name: "Galchonok, Daughter",
         icons: {
             call: 'svg',
             closed_eyes: 'svg',
@@ -84,7 +84,7 @@ export default [
     },
     {
         id: 6,
-        name: "Министр здравоохранения",
+        name: "Minister of Health",
         icons: {
             full_out: 'svg',
             full_regular: 'svg',
@@ -99,7 +99,7 @@ export default [
     },
     {
         id: 7,
-        name: "Посол",
+        name: "Ambassador",
         icons: {
             call: 'svg',
             cash: 'svg',
@@ -120,7 +120,7 @@ export default [
     },
     {
         id: 8,
-        name: "Министр финансов",
+        name: "Minister of Finance",
         icons: {
             angry: 'svg',
             cash: 'svg',
@@ -139,7 +139,7 @@ export default [
     },
     {
         id: 9,
-        name: "Ученный",
+        name: "Scientist",
         icons: {
             notebook: 'svg',
             full_regular: 'svg',
@@ -161,7 +161,7 @@ export default [
     },
     {
         id: 10,
-        name: "Глава МЧС",
+        name: "Head of the Ministry of Emergency Situations",
         icons: {
             angry: 'svg',
             full_back: 'svg',

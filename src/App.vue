@@ -15,7 +15,6 @@ export default {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  //font-family: "Raleway", sans-serif;
   font-weight: 400;
   text-decoration: none;
 }
