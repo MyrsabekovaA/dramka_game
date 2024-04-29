@@ -1,30 +1,29 @@
 <h1 align="center">DRAMKA</h1>
 
+<p align="center">
+  <a href="https://github.com/MyrsabekovaA/dramka_game">
+    <img src="https://img.shields.io/github/languages/top/MyrsabekovaA/dramka_game?color=lightgrey&style=flat-square&labelColor=success" alt="GitHub top language">
+  </a>
+</p>
+
 # Introduction
-[![GitHub top language](https://img.shields.io/github/languages/top/MyrsabekovaA/dramka_game?color=lightgrey&style=flat-square&labelColor=success&style=flat)]()
+**DRAMKA** is an immersive president simulator card game set in the present day. In this game, you assume the role of the president of a fictional country. You'll face various events that challenge the stability and prosperity of your nation. Each decision you make has ramifications, shaping the future events and the ultimate success of your reign. The objective is to govern effectively for as many years as possible. Even after your presidency ends, the game continues with you playing as the new president, dealing with the consequences of the decisions made by your predecessor.
 
-`DRAMKA` is a president simulator card game.
-The actions take place at the present time. As the president of a fictional country, you have to react to the events that will appear before your state. Each decision affects the outcome of further events in different ways. Your goal is to rule the country for as many years as possible. Once your reign is over, you continue to rule; however, as the new president.
+## Play the Game
 
-
-## Links
-
-* 👉[Play the game online](https://dramka.site/)
+👉 [Play DRAMKA online](https://dramka.site/)
 
 ## Features
 
-- Made With ❤️
-- Full Functioning, in addition to the original left, right, and up/down-sliding
-- You can turn on the music and immerse yourself in exciting adventures
-- Your progress is saved on the device, so when new update will come up you will continue from checkpoint
+- Crafted with ❤️ and attention to detail
+- Full-functionality beyond basic movements; supports intricate gesture-based controls
+- Dynamic background music that enhances the gaming experience
+- Progress autosave feature ensures you can resume from the last checkpoint after each update
 
-![](https://github.com/MyrsabekovaA/dramka_game/blob/dev/public/assets/gif.gif)
+![Gameplay GIF](https://github.com/MyrsabekovaA/dramka_game/blob/dev/public/assets/gif.gif)
 
-## TODO
-
-DRAMKA is still under development. so I am working on the plot of the game
-
-
+## Current Developments
+DRAMKA is actively being developed with exciting updates on the horizon. Current efforts are focused on enriching the game's storyline and adding new features to enhance player engagement.
 
 ## Project setup
 ```
